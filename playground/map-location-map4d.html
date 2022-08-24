@@ -92,7 +92,7 @@
           var txtaddress = $(this).val();
           $("#adress-map").text(txtaddress);
           json4DAPIURL =
-            "http://api.map4d.vn/sdk/place/text-search?text=" +
+            "https://api.map4d.vn/sdk/place/text-search?text=" +
             txtaddress.split(" ").join("+") +
             "&key=" +
             api4dkey;
