@@ -27,7 +27,7 @@
       class="paginationjs-theme-blue paginationjs-big"
     ></div>
     <script>
-      const jsonURL =
+      /* const jsonURL =
         "https://www.jaybranding.com/wp-json/wp/v2/posts/?per_page=100";
       $("#pagination-container").pagination({
         dataSource: function (done) {
@@ -54,39 +54,75 @@
         });
         html += "</ul>";
         return html;
-      }
+      }*/
     </script>
 
     <script>
       var queryString = `
-        
-        {
-  posts {
-    nodes {
-      featuredImage {
-        node {
-          sourceUrl
+
+              {
+        posts {
+          nodes {
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            title
+            id
+            slug
+          }
         }
       }
-      title
-      id
-      slug
-    }
-  }
-}
-`;
+      `;
 
-      fetch("https://www.jaybranding.com/graphql", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      let globalData;
+
+      async function myFunction() {
+        const res = await fetch("https://www.jaybranding.com/graphql", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            query: queryString,
+          }),
+        });
+        const data = await res.json();
+        globalData = data;
+        console.log(globalData);
+        let jsonData = globalData.data.posts.nodes;
+        console.log(jsonData);
+      }
+      myFunction();
+
+      $("#pagination-container").pagination({
+        dataSource: stringify(jsonData),
+        /*function (done) {
+          $.ajax({
+                  type: "GET",
+                  url: jsonURL,
+                  success: function (response) {
+                    done(response);
+                    $(".loadingmsg").remove();
+                  },
+                });
+        }, */
+        callback: function (data, pagination) {
+          var html = simpleTemplating(data);
+          $("#data-container").html(html);
         },
-        body: JSON.stringify({
-          query: queryString,
-        }),
-      })
-        .then((res) => res.json())
-        .then((res) => console.log(res.data));
+        className: "paginationjs-theme-blue paginationjs-big",
+      });
+
+      function simpleTemplating(data) {
+        var html = "<ul>";
+        $.each(data, function (index, item) {
+          html += "<li>" + item.id + "-" + item.title.rendered + "</li>";
+        });
+        html += "</ul>";
+        return html;
+      }
     </script>
   </body>
 </html>
