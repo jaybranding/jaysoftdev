@@ -15,14 +15,20 @@
     <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
   </head>
   <body>
-    <div id="data-container"></div>
+    <div id="data-container">
+      <div class="loadingmsg">
+        <img src="img/Loading_2.gif" alt="" srcset="" />
+        Loading data...
+      </div>
+    </div>
 
     <div
       id="pagination-container"
       class="paginationjs-theme-blue paginationjs-big"
     ></div>
     <script>
-      const jsonURL = "./location.json";
+      const jsonURL =
+        "https://www.jaybranding.com/wp-json/wp/v2/posts/?per_page=100";
       $("#pagination-container").pagination({
         dataSource: function (done) {
           $.ajax({
@@ -30,6 +36,7 @@
             url: jsonURL,
             success: function (response) {
               done(response);
+              $(".loadingmsg").remove();
             },
           });
         },
@@ -43,11 +50,43 @@
       function simpleTemplating(data) {
         var html = "<ul>";
         $.each(data, function (index, item) {
-          html += "<li>" + item.ID + "-" + item.Name + "</li>";
+          html += "<li>" + item.id + "-" + item.title.rendered + "</li>";
         });
         html += "</ul>";
         return html;
       }
+    </script>
+
+    <script>
+      var queryString = `
+        
+        {
+  posts {
+    nodes {
+      featuredImage {
+        node {
+          sourceUrl
+        }
+      }
+      title
+      id
+      slug
+    }
+  }
+}
+`;
+
+      fetch("https://www.jaybranding.com/graphql", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          query: queryString,
+        }),
+      })
+        .then((res) => res.json())
+        .then((res) => console.log(res.data));
     </script>
   </body>
 </html>

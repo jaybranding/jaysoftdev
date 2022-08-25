@@ -69,6 +69,8 @@
               //title: "Demo title",
               //snippet: "Demo description <br/><a href=#>Link abc</a>",
               position: { lat: latnofn, lng: lngnofn },
+              iconView: `<img src="img/logo.webp" width="20px"/>`, //set HTML cho icon
+              anchor: [0.5, 0.5], //vi tri x, y cua icon
             });
             // Thêm marker vào bản đồ
             marker.setMap(map);
@@ -76,7 +78,6 @@
         </script>
       </div>
     </div>
-
     <script type="text/javascript">
       $(document).ready(function () {
         //init map 2st time
