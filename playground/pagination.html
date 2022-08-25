@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pagination</title>
+    <link
+      rel="stylesheet"
+      href="https://pagination.js.org/dist/2.1.5/pagination.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://pagination.js.org/dist/2.1.5/pagination.min.js"></script>
+  </head>
+  <body>
+    <div id="data-container"></div>
+
+    <div
+      id="pagination-container"
+      class="paginationjs-theme-blue paginationjs-big"
+    ></div>
+    <script>
+      const jsonURL = "./location.json";
+      $("#pagination-container").pagination({
+        dataSource: function (done) {
+          $.ajax({
+            type: "GET",
+            url: jsonURL,
+            success: function (response) {
+              done(response);
+            },
+          });
+        },
+        callback: function (data, pagination) {
+          var html = simpleTemplating(data);
+          $("#data-container").html(html);
+        },
+        className: "paginationjs-theme-blue paginationjs-big",
+      });
+
+      function simpleTemplating(data) {
+        var html = "<ul>";
+        $.each(data, function (index, item) {
+          html += "<li>" + item.ID + "-" + item.Name + "</li>";
+        });
+        html += "</ul>";
+        return html;
+      }
+    </script>
+  </body>
+</html>
