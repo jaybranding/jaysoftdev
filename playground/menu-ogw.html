@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <title>Menu OGW</title>
+
+    <script>
+      var menuAPI = "./menu-ogw.json";
+
+      //get json and print
+      $.getJSON(menuAPI, {
+        format: "json",
+      }).done(function (data) {
+        var outputHTMLnav = "";
+        var outputSubmenu = "";
+        var outputSubmenucol1 = "";
+        var outputSubmenucol2 = "";
+        console.log(data);
+        $.each(data, function (i, item) {
+          outputHTMLnav =
+            outputHTMLnav +
+            `
+      <li class="nav-item" id="nav-menu-${i}" >${data[i].navigation.title}</li>
+          `;
+          outputSubmenu =
+            outputSubmenu + `<div class="wrapper" id="nav-contain-${i}">`;
+          $.each(data[i].navigation.item, function (j, item) {
+            outputSubmenucol1 =
+              outputSubmenucol1 +
+              `
+            <li id="item-${j}"><span>${data[i].navigation.item[j].title}</span></li>
+
+           `;
+
+            outputSubmenucol2 =
+              outputSubmenucol2 +
+              `
+              <div class="sub">
+                <div class="sub1"><img src="${data[i].navigation.item[j].imgURL}"/></div>
+                <div class="sub2">`;
+            $.each(data[i].navigation.item[j].menu, function (x, item) {
+              outputSubmenucol2 =
+                outputSubmenucol2 +
+                `
+                    <a href="${data[i].navigation.item[j].menu[x].URL}" id="item-sub-${x}">${data[i].navigation.item[j].menu[x].text}</a>
+                    `;
+            });
+            outputSubmenucol2 =
+              outputSubmenucol2 +
+              `
+
+
+                </div>
+              </div>
+
+                  `;
+          });
+          outputSubmenu =
+            outputSubmenu +
+            `<div class="col1">
+        <ul> ${outputSubmenucol1}
+          </ul>
+
+                  </div>
+      <div class="col2">
+      ${outputSubmenucol2}
+      </div>
+
+      </div>
+      `;
+        });
+
+        $(".nav-menu ul").html(outputHTMLnav);
+        $(".nav-container").html(outputSubmenu);
+      });
+    </script>
+  </head>
+  <body>
+    <rendered>
+      <nav class="nav-menu"><ul></ul></nav>
+      <div class="nav-container">
+        <div class="wrapper"></div>
+      </div>
+    </rendered>
+  </body>
+</html>

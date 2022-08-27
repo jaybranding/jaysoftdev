@@ -1,0 +1,72 @@
+[
+  {
+    "navigation": {
+      "title": "Ghế Massage",
+      "item": [
+        {
+          "title": "Master Drive AI1",
+          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "menu": [
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            },
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            }
+          ]
+        },
+        {
+          "title": "Master Drive AI2",
+          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
+          "menu": [
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            },
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "navigation": {
+      "title": "Massage Chân",
+      "item": [
+        {
+          "title": "Master Drive AI1",
+          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "menu": [
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            },
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            }
+          ]
+        },
+        {
+          "title": "Master Drive AI2",
+          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
+          "menu": [
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            },
+            {
+              "text": "Tìm Hiểu Thêm",
+              "URL": "/mua-sam/master-drive-ai/"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
