@@ -12,18 +12,43 @@
       referrerpolicy="no-referrer"
     ></script>
     <style>
+      .nav-menu ul {
+        display: flex;
+        list-style-type: none;
+      }
+
       .nav-item:hover {
         cursor: pointer;
       }
-      .nav-container .wrapper {
+      .nav-item .wrapper {
+        position: absolute;
+        width: 100vw;
+        left: 0;
         display: flex;
+        visibility: hidden;
+        transform: translateY(100px);
+        opacity: 0;
+        height: 0px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        background-color: aquamarine;
       }
-      .nav-container .wrapper .col1 {
+
+      .nav-item .wrapper.showBlock {
+        display: flex;
+        visibility: visible;
+        height: 200px;
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      .nav-item .wrapper .col1 {
         background-color: antiquewhite;
         width: 35%;
       }
       .nav-container .wrapper .col2 {
-        background-color: aliceblue;
+        background-color: blue;
         width: 65%;
       }
       .sub {
@@ -43,13 +68,13 @@
     </style>
     <script>
       $(function () {
-        $(".wrapper").hide();
         $(".nav-item").mouseover(function () {
-          $("#nav-contain-0").slideDown("slow");
+          $(".wrapper", this).addClass("showBlock");
+          console.log("show");
         });
 
         $(".nav-item").mouseleave(function () {
-          $("#nav-contain-0").slideUp("slow");
+          $(".wrapper", this).removeClass("showBlock");
         });
       });
     </script>
@@ -58,139 +83,65 @@
     <rendered>
       <nav class="nav-menu">
         <ul>
-          <li class="nav-item" id="nav-menu-0">Ghế Massage</li>
+          <li class="nav-item" id="nav-menu-0">
+            <button>Ghế Massage</button>
+            <div class="wrapper" id="nav-contain-0">
+              <div class="col1">
+                <ul>
+                  <li id="item-1"><span>Master Drive AI2</span></li>
+                </ul>
+              </div>
+              <div class="col2">
+                <div class="sub">
+                  <div class="sub1">
+                    <img
+                      src="https://via.placeholder.com/400x400?text=Master+Drive+AI2"
+                    />
+                  </div>
+                  <div class="sub2">
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
+                      >Tìm Hiểu Thêm</a
+                    >
 
-          <li class="nav-item" id="nav-menu-1">Massage Chân</li>
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
+                      >Tìm Hiểu Thêm</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item" id="nav-menu-1">
+            <button>Massage Chân</button>
+            <div class="wrapper" id="nav-contain-1">
+              <div class="col1">
+                <ul>
+                  <li id="item-1"><span>Master Drive AI2</span></li>
+                </ul>
+              </div>
+              <div class="col2">
+                <div class="sub">
+                  <div class="sub1">
+                    <img
+                      src="https://via.placeholder.com/400x400?text=Master+Drive+AI2"
+                    />
+                  </div>
+                  <div class="sub2">
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
+                      >Tìm Hiểu Thêm</a
+                    >
+
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
+                      >Tìm Hiểu Thêm</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
         </ul>
       </nav>
-      <div class="nav-container">
-        <div class="wrapper" id="nav-contain-0">
-          <div class="col1">
-            <ul>
-              <li id="item-0">Master Drive AI1</li>
-
-              <li id="item-1">Master Drive AI2</li>
-            </ul>
-          </div>
-          <div class="col2">
-            <div class="sub">
-              <div class="sub1">
-                <img
-                  src="https://via.placeholder.com/400x400?text=Master+Drive+AI1"
-                />
-              </div>
-              <div class="sub2">
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
-                  >Tìm Hiểu Thêm</a
-                >
-
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
-                  >Tìm Hiểu Thêm</a
-                >
-              </div>
-            </div>
-
-            <div class="sub">
-              <div class="sub1">
-                <img
-                  src="https://via.placeholder.com/400x400?text=Master+Drive+AI2"
-                />
-              </div>
-              <div class="sub2">
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
-                  >Tìm Hiểu Thêm</a
-                >
-
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
-                  >Tìm Hiểu Thêm</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="wrapper" id="nav-contain-1">
-          <div class="col1">
-            <ul>
-              <li id="item-0">Master Drive AI1</li>
-
-              <li id="item-1">Master Drive AI2</li>
-
-              <li id="item-0">Master Drive AI1</li>
-
-              <li id="item-1">Master Drive AI2</li>
-            </ul>
-          </div>
-          <div class="col2">
-            <div class="sub">
-              <div class="sub1">
-                <img
-                  src="https://via.placeholder.com/400x400?text=Master+Drive+AI1"
-                />
-              </div>
-              <div class="sub2">
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
-                  >Tìm Hiểu Thêm</a
-                >
-
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
-                  >Tìm Hiểu Thêm</a
-                >
-              </div>
-            </div>
-
-            <div class="sub">
-              <div class="sub1">
-                <img
-                  src="https://via.placeholder.com/400x400?text=Master+Drive+AI2"
-                />
-              </div>
-              <div class="sub2">
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
-                  >Tìm Hiểu Thêm</a
-                >
-
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
-                  >Tìm Hiểu Thêm</a
-                >
-              </div>
-            </div>
-
-            <div class="sub">
-              <div class="sub1">
-                <img
-                  src="https://via.placeholder.com/400x400?text=Master+Drive+AI1"
-                />
-              </div>
-              <div class="sub2">
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
-                  >Tìm Hiểu Thêm</a
-                >
-
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
-                  >Tìm Hiểu Thêm</a
-                >
-              </div>
-            </div>
-
-            <div class="sub">
-              <div class="sub1">
-                <img
-                  src="https://via.placeholder.com/400x400?text=Master+Drive+AI2"
-                />
-              </div>
-              <div class="sub2">
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
-                  >Tìm Hiểu Thêm</a
-                >
-
-                <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
-                  >Tìm Hiểu Thêm</a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </rendered>
   </body>
 </html>

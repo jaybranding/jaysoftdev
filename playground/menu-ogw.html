@@ -10,6 +10,84 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <style>
+      .nav-menu ul {
+        display: flex;
+        list-style-type: none;
+        justify-content: space-around;
+      }
+
+      .nav-item button:hover {
+        cursor: pointer;
+      }
+      .nav-item .wrapper {
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        display: flex;
+        visibility: hidden;
+        transform: translateY(100px);
+        opacity: 0;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        background-color: aquamarine;
+        justify-content: center;
+      }
+
+      .nav-item .wrapper.showBlock {
+        display: flex;
+        visibility: visible;
+        height: 200px;
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      .nav-item .wrapper .row {
+        display: flex;
+        width: 1140px;
+      }
+      .nav-item .wrapper .col1 {
+        background-color: antiquewhite;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .nav-item .wrapper .col1 ul {
+        width: 100%;
+        flex-wrap: wrap;
+        align-items: flex-start;
+      }
+
+      .nav-item .wrapper .col1 ul li {
+        width: 100%;
+        display: flex;
+      }
+      .nav-item .wrapper .col1 ul li a {
+        width: 400px;
+      }
+      .nav-container .wrapper .col2 {
+        background-color: blue;
+      }
+      .sub {
+        display: flex;
+        width: 600px;
+      }
+      .sub .sub1 {
+        width: 650px;
+      }
+      .sub .sub1 img {
+        width: 100%;
+      }
+
+      .sub .sub2 {
+        width: 50%;
+      }
+
+      .sub .sub2 a {
+        display: block;
+      }
+    </style>
     <title>Menu OGW</title>
 
     <script>
@@ -23,29 +101,28 @@
         var outputSubmenu = "";
         var outputSubmenucol1 = "";
         var outputSubmenucol2 = "";
-        console.log(data);
+
         $.each(data, function (i, item) {
-          outputHTMLnav =
-            outputHTMLnav +
-            `
-      <li class="nav-item" id="nav-menu-${i}" >${data[i].navigation.title}</li>
-          `;
+          //return value to empty
+          outputSubmenu = "";
+          outputSubmenucol1 = "";
           outputSubmenu =
-            outputSubmenu + `<div class="wrapper" id="nav-contain-${i}">`;
+            outputSubmenu +
+            `<div class="wrapper" id="nav-contain-${i}"><div class="row">`;
+
           $.each(data[i].navigation.item, function (j, item) {
-            outputSubmenucol1 =
-              outputSubmenucol1 +
-              `
-            <li id="item-${j}"><span>${data[i].navigation.item[j].title}</span></li>
+            //rerturn value to emplty of tow column
 
-           `;
-
+            outputSubmenucol2 = "";
+            outputSubmenucol2sub = "";
+            //start adding col2
             outputSubmenucol2 =
               outputSubmenucol2 +
               `
-              <div class="sub">
+              <div class="sub" aria-controls="${i}-${j}">
                 <div class="sub1"><img src="${data[i].navigation.item[j].imgURL}"/></div>
                 <div class="sub2">`;
+
             $.each(data[i].navigation.item[j].menu, function (x, item) {
               outputSubmenucol2 =
                 outputSubmenucol2 +
@@ -53,6 +130,7 @@
                     <a href="${data[i].navigation.item[j].menu[x].URL}" id="item-sub-${x}">${data[i].navigation.item[j].menu[x].text}</a>
                     `;
             });
+
             outputSubmenucol2 =
               outputSubmenucol2 +
               `
@@ -61,8 +139,18 @@
                 </div>
               </div>
 
-                  `;
+                  `; //end adding col2
+
+            //start adding col1
+            outputSubmenucol1 =
+              outputSubmenucol1 +
+              `
+            <li class="sub-content item-${j}"  >
+              <a href=# aria-controls="${i}-${j}">${data[i].navigation.item[j].title}</a>
+            </li>`;
           });
+
+          //submenu combine 2 col
           outputSubmenu =
             outputSubmenu +
             `<div class="col1">
@@ -70,25 +158,83 @@
           </ul>
 
                   </div>
-      <div class="col2">
-      ${outputSubmenucol2}
-      </div>
+     <div class="col2">${outputSubmenucol2}</div>
+
+      </div> 
 
       </div>
       `;
+
+          outputHTMLnav =
+            outputHTMLnav +
+            `
+      <li class="nav-item" id="nav-menu-${i}" ><a href=#>${data[i].navigation.title}</a>
+        `;
+          outputHTMLnav =
+            outputHTMLnav +
+            outputSubmenu +
+            `
+        </li>
+          `;
         });
 
         $(".nav-menu ul").html(outputHTMLnav);
-        $(".nav-container").html(outputSubmenu);
+        //$(".nav-container").html(outputSubmenu);
+
+        // Action hover and click
+
+        $(".nav-item").mouseover(function () {
+          $(".wrapper", this).addClass("showBlock");
+          $(".sub").hide();
+          $(".item-0 .sub").show();
+        });
+
+        $(".nav-item").mouseleave(function () {
+          $(".wrapper", this).removeClass("showBlock");
+        });
+        $(".sub-content .sub").hide();
+        $(".sub-content a").click(function () {
+          $(".sub").hide();
+          obj = $(this).attr("aria-controls");
+          $("div.sub[aria-controls=" + obj + "]").show();
+          //parentobj = $(this).parent();
+          // parentprentobj = parentobj.parent();
+          // parent = $(".sub", parentobj);
+          // $(".sub-content .sub", parentprentobj).hide();
+          //  parent.show();
+        });
       });
     </script>
   </head>
   <body>
     <rendered>
       <nav class="nav-menu"><ul></ul></nav>
-      <div class="nav-container">
-        <div class="wrapper"></div>
-      </div>
     </rendered>
+
+    <div class="out">
+      <div class="out1">
+        <button class="out1btn btnall" aria-controls="12345">Click</button>
+      </div>
+      <div class="out2">
+        <div class="out2content contentall" aria-controls="12345">Content</div>
+        <div class="out2content contentall1" aria-controls="12ww345">
+          heiwjdks
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(function () {
+        console.log("doc redy");
+        $("button.btnall").click(function () {
+          obj = $(this).attr("aria-controls");
+          console.log(obj);
+          $("div.contentall[aria-controls=" + obj + "]").css(
+            "background-color",
+            "red"
+          );
+        });
+      });
+    </script>
   </body>
 </html>
