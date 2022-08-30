@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+      <g>
+        <title>Layer 1</title>
+
+        <path
+          class="path"
+          id="svg_1"
+          d="m128,144c0,0 161,-3 161,-3c0,0 76,19 76,19c0,0 1,59 1,59c0,0 -51,63 -51,63c0,0 -179,0 -179,0"
+          opacity="NaN"
+          stroke="#000"
+          fill="#fff"
+        />
+      </g>
+    </svg>
+    <style>
+      .path {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: dash 5s linear alternate infinite;
+      }
+
+      @keyframes dash {
+        from {
+          stroke-dashoffset: 822;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </body>
+</html>
