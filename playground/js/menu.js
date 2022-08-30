@@ -32,7 +32,9 @@ $.getJSON(menuAPI, {
       ">" +
       data[i].navigation.title +
       "<span class=icon>x</span></itemm>" +
-      "<subitemms>";
+      "<subitemms link=" +
+      [i] +
+      ">";
 
     submenuCol1 = submenuCol1 + "<wrapper1 link=" + [i] + ">";
 
@@ -63,7 +65,9 @@ $.getJSON(menuAPI, {
 
       mainmenum =
         mainmenum +
-        "<subitemm>" +
+        "<subitemm aria-controls=" +
+        ariacontrols +
+        ">" +
         "<img src=" +
         data[i].navigation.item[j].imgURL +
         " />" +
@@ -76,8 +80,10 @@ $.getJSON(menuAPI, {
 
       popupm =
         popupm +
-        "<wrapperm>" +
-        "<div>Back to Home</div><div>x</div>" +
+        "<wrapperm aria-controls=" +
+        ariacontrols +
+        "><overlay>" +
+        "<div class='close left'>Back to Home</div><div class='close right'>x</div>" +
         "<div><img src=" +
         data[i].navigation.item[j].imgURL +
         " /></div>" +
@@ -96,7 +102,7 @@ $.getJSON(menuAPI, {
           `<li><a href="${data[i].navigation.item[j].menu[x].URL}">${data[i].navigation.item[j].menu[x].text}</a></li>`;
       });
 
-      popupm = popupm + "</wrapperm><hr>"; // closing m
+      popupm = popupm + "</overlay></wrapperm>"; // closing m
       submenuCol2 = submenuCol2 + "</ul></div>"; //closing right
       submenuCol2 = submenuCol2 + "</wrapper2>"; //cloding wrapper2
     });
@@ -107,11 +113,27 @@ $.getJSON(menuAPI, {
 
   //action after success
 
-  $("nav").html(mainmenu);
-  $("#col1").html(submenuCol1);
-  $("#col2").html(submenuCol2);
-  $("navm").html(mainmenum);
-  $("popupm").html(popupm);
+  function getWindowDimensions() {
+    const width = window.innerWidth;
+    const height = window.innerHeight;
+    const ratio = (width / height) * 100;
+    return { width, height, ratio };
+  }
+
+  const { width } = getWindowDimensions();
+
+  if (width < 830) {
+    //mobile & tablet
+    $("navm").html(mainmenum);
+    $("popupm").html(popupm);
+    $("render-desktop").remove();
+  } else {
+    //desktop
+    $("nav").html(mainmenu);
+    $("#col1").html(submenuCol1);
+    $("#col2").html(submenuCol2);
+    $("render-mobile").remove();
+  }
 
   //action of menu
   //$("sub").hide();
@@ -124,6 +146,7 @@ $.getJSON(menuAPI, {
 
     obj = $(this).attr("link");
     $("wrapper1[link=" + obj + "]").slideDown();
+    $("wrapper1[link=" + obj + "] item").removeClass("itemselect");
     $("wrapper1[link=" + obj + "] item")
       .first()
       .addClass("itemselect");
@@ -148,9 +171,29 @@ $.getJSON(menuAPI, {
     $("item").removeClass("itemselect");
     $(this).addClass("itemselect");
     obj = $(this).attr("aria-controls");
-    $("wrapper2[aria-controls=" + obj + "]").show();
+    $("wrapper2[aria-controls=" + obj + "]").fadeIn();
   });
 
-  //menu mobile render
-  //menu mobile render
+  //action of menu mobile
+  $("subitemms").hide();
+  $("wrapperm").hide();
+  $("itemm").click(function () {
+    $("subitemms").slideUp();
+
+    obj = $(this).attr("link");
+    $("subitemms[link=" + obj + "]").slideToggle();
+  });
+
+  $("subitemm").click(function () {
+    obj = $(this).attr("aria-controls");
+    $("wrapperm[aria-controls=" + obj + "]").addClass("absolutenav");
+    $("wrapperm[aria-controls=" + obj + "]").slideToggle();
+  });
+  $(".close").click(function () {
+    var parent = $(".close").parent();
+    parent.removeClass("absolutenav");
+    parent.hide();
+  });
 });
+
+$(document).ready(function () {});

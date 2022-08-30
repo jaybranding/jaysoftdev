@@ -193,33 +193,15 @@
   },
   {
     "navigation": {
-      "title": "Massage Chân",
+      "title": "Thể Dục",
       "item": [
         {
-          "title": "Master Drive AI1",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "title": "Trek Pro T7.2 Lite Treadmill",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Treck-Pro-T7.2.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            }
-          ]
-        },
-        {
-          "title": "Master Drive AI2",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
-          "menu": [
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/trek-pro-t7-2-lite-treadmill/"
             }
           ]
         }
@@ -228,33 +210,75 @@
   },
   {
     "navigation": {
-      "title": "Massage Chân",
+      "title": "Đệm Massage",
       "item": [
         {
-          "title": "Master Drive AI1",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "title": "Mobile Seat Max",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/02/Mobile-Seat-XE-mini1.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/mobile-seat-xe-max/"
             }
           ]
         },
         {
-          "title": "Master Drive AI2",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
+          "title": "Mobile Seat XE Mini",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/02/Rectangle-246-2.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/ogawa-mobile-seat-xe-mini/"
+            }
+          ]
+        },
+        {
+          "title": "Mobile Shiatshu Max",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Mobile-Shiatshu-Max-1-600x600.png.webp",
+          "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/mobile-shiatshu-max/"
+            }
+          ]
+        },
+        {
+          "title": "Mobile Shiatshu LITE",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Shiatsu-lite-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/mobile-shiatsu-lite/"
+            }
+          ]
+        },
+        {
+          "title": "Mobile Seat Xe Prime",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Mobile-Seat-Prime-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/mobile-seat-xe-prime/"
+            }
+          ]
+        },
+        {
+          "title": "Comfi Back Lower Back",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Comfi-back-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/comfi-back-lower-back/"
+            }
+          ]
+        },
+        {
+          "title": "Tinkle Touch",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/07/Tinkle-Touch-1-1-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/tinkle-touch/"
             }
           ]
         }
@@ -263,33 +287,35 @@
   },
   {
     "navigation": {
-      "title": "Massage Chân",
+      "title": "Massage Cầm Tay",
       "item": [
         {
-          "title": "Master Drive AI1",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "title": "Snazzy Touch",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/IMG20190815134652-1024x1024.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/snazzy-touch/"
             }
           ]
         },
         {
-          "title": "Master Drive AI2",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
+          "title": "Snazzy Touch Plus",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/may-massage-cam-tay-Snazzy-Touch-3-600x600.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/snazzy-touch-plus/"
+            }
+          ]
+        },
+        {
+          "title": "Vivid Touch",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/vivid-touch-600x600.png.webp",
+          "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/vivid-touch/"
             }
           ]
         }
@@ -298,33 +324,35 @@
   },
   {
     "navigation": {
-      "title": "Massage Chân",
+      "title": "Thiết Bị Làm Đẹp",
       "item": [
         {
-          "title": "Master Drive AI1",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "title": "Smart Eye Massager",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Smart-Eye-Massager-2.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/smart-eye-massager/"
             }
           ]
         },
         {
-          "title": "Master Drive AI2",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
+          "title": "Slimming Belt",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Smart-Eye-Massager-2.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/slimming-belt/"
+            }
+          ]
+        },
+        {
+          "title": "USB Eye Mask",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/USB-Eye-Mask-600x600.png.webp",
+          "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/usb-eye-mask/"
             }
           ]
         }
@@ -333,33 +361,15 @@
   },
   {
     "navigation": {
-      "title": "Massage Chân",
+      "title": "Thiết Bị Gia Dụng",
       "item": [
         {
-          "title": "Master Drive AI1",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "title": "Sắp Ra Mắt",
+          "imgURL": "",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            }
-          ]
-        },
-        {
-          "title": "Master Drive AI2",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
-          "menu": [
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": ""
             }
           ]
         }
