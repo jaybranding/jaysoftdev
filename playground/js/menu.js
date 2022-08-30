@@ -82,7 +82,7 @@ $.getJSON(menuAPI, {
         popupm +
         "<wrapperm aria-controls=" +
         ariacontrols +
-        "><overlay>" +
+        "><container>" +
         "<div class='close left'>Back to Home</div><div class='close right'>x</div>" +
         "<div><img src=" +
         data[i].navigation.item[j].imgURL +
@@ -102,7 +102,7 @@ $.getJSON(menuAPI, {
           `<li><a href="${data[i].navigation.item[j].menu[x].URL}">${data[i].navigation.item[j].menu[x].text}</a></li>`;
       });
 
-      popupm = popupm + "</overlay></wrapperm>"; // closing m
+      popupm = popupm + "</container><overlay></overlay></wrapperm>"; // closing m
       submenuCol2 = submenuCol2 + "</ul></div>"; //closing right
       submenuCol2 = submenuCol2 + "</wrapper2>"; //cloding wrapper2
     });
@@ -176,7 +176,7 @@ $.getJSON(menuAPI, {
 
   //action of menu mobile
   $("subitemms").hide();
-  $("wrapperm").hide();
+  //$("wrapperm").hide();
   $("itemm").click(function () {
     $("subitemms").slideUp();
 
@@ -184,16 +184,20 @@ $.getJSON(menuAPI, {
     $("subitemms[link=" + obj + "]").slideToggle();
   });
 
+  $("wrapperm").addClass("dismissnav");
+
   $("subitemm").click(function () {
     obj = $(this).attr("aria-controls");
-    $("wrapperm[aria-controls=" + obj + "]").addClass("absolutenav");
-    $("wrapperm[aria-controls=" + obj + "]").slideToggle();
+    if ($("wrapperm[aria-controls=" + obj + "]").hasClass("dismissnav")) {
+      $("wrapperm[aria-controls=" + obj + "]")
+        .removeClass("dismissnav")
+        .addClass("selectednav")
+        .show();
+    }
   });
-  $(".close").click(function () {
-    var parent = $(".close").parent();
+  $(".close, overlay").click(function () {
+    var parent = $(".close").parent().parent();
     parent.removeClass("absolutenav");
-    parent.hide();
+    parent.removeClass("selectednav").addClass("dismissnav");
   });
 });
-
-$(document).ready(function () {});

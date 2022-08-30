@@ -19,7 +19,7 @@
 
     <script src="js/menu.js"></script>
   </head>
-  <body>
+  <body style="margin: 0px">
     <render-desktop>
       <nav></nav>
       <sub>
@@ -108,6 +108,9 @@
       img {
         max-width: 300px;
       }
+      render-mobile {
+        overflow: hidden;
+      }
       render-mobile itemm {
         display: block;
         padding: 10px 5px;
@@ -133,15 +136,38 @@
       render-mobile subitemms subitemm h4 {
         line-height: 0px;
       }
-
-      wrapperm.absolutenav {
+      wrapperm {
+        display: none;
+      }
+      wrapperm {
         position: fixed;
         height: 100vh;
-        width: 300px;
+        width: 100vw;
+        display: flex;
+        justify-content: end;
+        transform: translateX(100%);
+        -webkit-transform: translateX(100%);
         z-index: 1000;
-        background-color: white;
       }
-      wrapperm.absolutenav overlay {
+      wrapperm container {
+        width: 350px;
+        height: 100vh;
+        background-color: white;
+        display: block;
+        z-index: 1000;
+        padding: 10px;
+        box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
+        -webkit-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
+        -moz-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
+      }
+      wrapperm overlay {
+        background-color: rgba(0, 0, 0, 0);
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        position: absolute;
+        top: 0;
+        z-index: -1;
       }
       wrapperm .right {
         display: inline;
@@ -150,6 +176,52 @@
       wrapperm .left {
         display: inline;
         float: left;
+      }
+
+      .selectednav {
+        animation: slide-in ease-in-out 0.5s forwards;
+        -webkit-animation: slide-in ease-in-out 0.5s forwards;
+      }
+
+      .dismissnav {
+        animation: slide-out ease-in-out 0.5s forwards;
+        -webkit-animation: slide-out ease-in-out 0.5s forwards;
+      }
+
+      @keyframes slide-in {
+        0% {
+          -webkit-transform: translateX(100%);
+        }
+        100% {
+          -webkit-transform: translateX(0%);
+        }
+      }
+
+      @-webkit-keyframes slide-in {
+        0% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(0%);
+        }
+      }
+
+      @keyframes slide-out {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(100%);
+        }
+      }
+
+      @-webkit-keyframes slide-out {
+        0% {
+          -webkit-transform: translateX(0%);
+        }
+        100% {
+          -webkit-transform: translateX(100%);
+        }
       }
     </style>
   </body>
