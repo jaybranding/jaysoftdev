@@ -102,6 +102,34 @@
               "URL": "https://ogawaworld.vn/bo-suu-tap/"
             }
           ]
+        },
+        {
+          "title": "Smart Vogue Prime",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Smart-Voguer-Prime-1-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/smart-vogue-prime/"
+            },
+            {
+              "text": "Bộ Sưu Tập",
+              "URL": "https://ogawaworld.vn/bo-suu-tap/"
+            }
+          ]
+        },
+        {
+          "title": "Luxe Armour Sofa",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Luxe-Amou-be-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/luxe-armour-sofa/"
+            },
+            {
+              "text": "Bộ Sưu Tập",
+              "URL": "https://ogawaworld.vn/bo-suu-tap/"
+            }
+          ]
         }
       ]
     }
@@ -111,30 +139,52 @@
       "title": "Massage Chân",
       "item": [
         {
-          "title": "Master Drive AI1",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI1",
+          "title": "Omknee 2.0",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/02/Frame-558-1.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
-            {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/omknee-20/"
             }
           ]
         },
         {
-          "title": "Master Drive AI2",
-          "imgURL": "https://via.placeholder.com/400x400?text=Master+Drive+AI2",
+          "title": "Zen Footee",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/02/Zen-Foottee.png.webp",
           "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
-            },
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/zen-foottee/"
+            }
+          ]
+        },
+        {
+          "title": "Comfy Foot Massage",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Comefy-Therapy-600x600.png.webp",
+          "menu": [
             {
-              "text": "Tìm Hiểu Thêm",
-              "URL": "/mua-sam/master-drive-ai/"
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/comfy-foot-massage/"
+            }
+          ]
+        },
+        {
+          "title": "ISpa Steam Foot Massager",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/iSpa-Steam-Foot-Massager-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/ispa-steam-foot-massager/"
+            }
+          ]
+        },
+        {
+          "title": "EliteX 3D Foot Reflexology",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Elite-3D-Foot-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "https://ogawaworld.vn/mua-sam/elitex-3d-foot-reflexology/"
             }
           ]
         }
