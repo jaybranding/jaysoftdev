@@ -29,11 +29,10 @@
         </div>
       </sub>
     </render-desktop>
-    <div style="background-color: red">Mobile</div>
 
     <render-mobile>
-      <navm></navm>
       <popupm></popupm>
+      <navm></navm>
     </render-mobile>
     <style>
       nav {
@@ -109,12 +108,48 @@
       img {
         max-width: 300px;
       }
-
-      subitemms {
+      render-mobile itemm {
         display: block;
+        padding: 10px 5px;
+        border-bottom: solid #777777 1px;
+      }
+
+      render-mobile itemm span.icon {
+        float: right;
+      }
+      render-mobile subitemms {
+        display: flex;
+        flex-wrap: wrap;
         background-color: aqua;
-        max-height: 100px;
         overflow: hidden;
+      }
+      render-mobile subitemms subitemm {
+        width: 50%;
+        text-align: center;
+      }
+      render-mobile subitemms subitemm img {
+        max-height: 100px;
+      }
+      render-mobile subitemms subitemm h4 {
+        line-height: 0px;
+      }
+
+      wrapperm.absolutenav {
+        position: fixed;
+        height: 100vh;
+        width: 300px;
+        z-index: 1000;
+        background-color: white;
+      }
+      wrapperm.absolutenav overlay {
+      }
+      wrapperm .right {
+        display: inline;
+        float: right;
+      }
+      wrapperm .left {
+        display: inline;
+        float: left;
       }
     </style>
   </body>
