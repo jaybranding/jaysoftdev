@@ -134,6 +134,7 @@ render-mobile {
   background-color: white;
   z-index: 100000;
   transition: ease-in-out 0.5s;
+  height: 100vh;
 }
 
 render-mobile navm .navmhead {
@@ -221,6 +222,7 @@ render-mobile wrapperm container {
   box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
   -webkit-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
   -moz-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
+  padding: 20px;
 }
 render-mobile wrapperm container .close {
   font-family: "Source Sans Pro", Sans-serif;

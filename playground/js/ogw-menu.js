@@ -131,7 +131,7 @@ $.getJSON(menuAPI, {
   });
 
   //action after success
-
+  /*
   function getWindowDimensions() {
     const width = window.innerWidth;
     const height = window.innerHeight;
@@ -160,7 +160,7 @@ $.getJSON(menuAPI, {
     //$("render-desktop #col2").html(submenuCol2);
     $("render-mobile").remove();
   }
-
+*/
   //action of menu
   //$("sub").hide();
   $("wrapper1").hide();
