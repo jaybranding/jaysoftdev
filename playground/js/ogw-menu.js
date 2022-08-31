@@ -1,5 +1,11 @@
 var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
 
+//button function
+$("#btn-menu-main-container").mouseenter(function () {
+  $("#menu-main-container").hide();
+  $("#menu-main-container").slideDown();
+});
+
 //get json and print
 $.getJSON(menuAPI, {
   format: "json",
