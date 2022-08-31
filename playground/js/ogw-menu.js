@@ -109,7 +109,7 @@ $(function () {
           if (pathnameLang == "/en/") {
             pathURL = "/en" + data[i].navigation.item[j].menu[x].URL;
           } else {
-            pathURL = "/en" + data[i].navigation.item[j].menu[x].URL;
+            pathURL = data[i].navigation.item[j].menu[x].URL;
           }
           submenuCol2 =
             submenuCol2 +
