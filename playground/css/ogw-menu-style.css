@@ -27,7 +27,7 @@ render-desktop .row {
 }
 render-desktop #col1 {
   width: 300px;
-  padding: 40px 0px 90px 0px;
+  padding: 40px 0px 100px 0px;
 }
 render-desktop #col1 wrapper1 {
   display: block;
@@ -63,7 +63,7 @@ render-desktop #col1 wrapper1 item.itemselect::before {
 }
 
 render-desktop #col2 {
-  padding: 40px 0px 90px 0px;
+  padding: 40px 0px 100px 0px;
 }
 
 render-desktop #col2 wrapper2 {
