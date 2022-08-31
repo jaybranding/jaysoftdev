@@ -130,8 +130,15 @@ $.getJSON(menuAPI, {
   } else {
     //desktop
     $("render-desktop nav").html(mainmenu);
-    $("render-desktop #col1").html(submenuCol1);
-    $("render-desktop #col2").html(submenuCol2);
+    var rowhtml =
+      "<div id=col1>" +
+      submenuCol1 +
+      "</div><div id=col2>" +
+      submenuCol2 +
+      "</div>";
+    $("render-desktop sub row").html(rowhtml);
+    //$("render-desktop #col1").html(submenuCol1);
+    //$("render-desktop #col2").html(submenuCol2);
     $("render-mobile").remove();
   }
 
