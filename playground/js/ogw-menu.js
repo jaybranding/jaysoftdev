@@ -1,15 +1,4 @@
 var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
-$(function () {
-  //button function
-  $("#menu-main-container").hide();
-
-  $("#btn-menu-main-container").mouseenter(function () {
-    $("#menu-main-container").slideDown();
-  });
-  $("#menu-main-container").mouseleave(function () {
-    $("#menu-main-container").slideUp();
-  });
-});
 
 //get json and print
 $.getJSON(menuAPI, {
@@ -175,6 +164,7 @@ $.getJSON(menuAPI, {
 
     $("wrapper1").slideUp();
     $("wrapper2").slideUp();
+    $("#menu-main-container").slideUp();
   });
 
   $("wrapper1 item").click(function () {
@@ -208,5 +198,19 @@ $.getJSON(menuAPI, {
     var parent = $(".close").parent().parent();
     parent.removeClass("absolutenav");
     parent.removeClass("selectednav").addClass("dismissnav");
+  });
+});
+
+$(function () {
+  //button function
+  $("#menu-main-container").hide();
+
+  $("#btn-menu-main-container").mouseenter(function () {
+    $("wrapper1").hide();
+    $("wrapper2").hide();
+    $("#menu-main-container").slideDown();
+  });
+  $("#menu-main-container").mouseleave(function () {
+    $("#menu-main-container").slideUp();
   });
 });
