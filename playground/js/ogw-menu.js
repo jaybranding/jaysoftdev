@@ -45,7 +45,7 @@ $.getJSON(menuAPI, {
         submenuCol1 +
         "<item aria-controls=" +
         ariacontrols +
-        "> <i class='fas fa-caret-right'></i> " +
+        "><i class='fas fa-caret-right'></i>" +
         data[i].navigation.item[j].title +
         "</item>";
       submenuCol2 =
@@ -94,12 +94,12 @@ $.getJSON(menuAPI, {
       $.each(data[i].navigation.item[j].menu, function (x, item) {
         submenuCol2 =
           submenuCol2 +
-          `<li><a href="${data[i].navigation.item[j].menu[x].URL}"><i class="fas fa-caret-right"></i> ${data[i].navigation.item[j].menu[x].text}</a></li>`;
+          `<li><a href="${data[i].navigation.item[j].menu[x].URL}"><i class="fas fa-caret-right"></i>${data[i].navigation.item[j].menu[x].text}</a></li>`;
 
         //popup menu
         popupm =
           popupm +
-          `<li><a href="${data[i].navigation.item[j].menu[x].URL}"><i class="fas fa-caret-right"></i> ${data[i].navigation.item[j].menu[x].text}</a></li>`;
+          `<li><a href="${data[i].navigation.item[j].menu[x].URL}"><i class="fas fa-caret-right"></i>${data[i].navigation.item[j].menu[x].text}</a></li>`;
       });
 
       popupm = popupm + "</container><overlay></overlay></wrapperm>"; // closing m

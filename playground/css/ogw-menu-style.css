@@ -3,8 +3,9 @@ render-desktop nav {
   justify-content: space-around;
 }
 render-desktop nav .menu-item {
-  padding: 10px 20px;
+  padding: 12px 15px;
   font-size: 12px;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 render-desktop sub {
@@ -27,12 +28,21 @@ render-desktop #col1 wrapper1 item {
   display: block;
   padding: 20px 45px;
   font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+render-desktop #col1 wrapper1 item i {
+  visibility: hidden;
+  display: inline-block;
+  padding-right: 5px;
 }
 render-desktop #col1 wrapper1 item.itemselect {
   background-color: #777777;
   border-radius: 50px;
   color: white;
-  padding-left: 31px;
+  padding-left: 45px;
+}
+render-desktop #col1 wrapper1 item.itemselect i {
+  visibility: visible;
 }
 
 render-desktop #col1 wrapper1 item.itemselect::before {
@@ -58,17 +68,27 @@ render-desktop #col2 wrapper2 div.right ul li a {
   text-decoration: none;
   color: black;
   font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+render-desktop #col2 wrapper2 div.right ul li a i {
+  visibility: hidden;
+  display: inline-block;
+  padding-right: 5px;
 }
 
 render-desktop #col2 wrapper2 div.right ul li a:hover {
-  padding-left: 0px;
+  text-decoration: underline;
+}
+render-desktop #col2 wrapper2 div.right ul li a:hover i {
+  visibility: visible;
+  text-decoration: none;
 }
 
 render-desktop #col2 wrapper2 div.right ul li a:hover::before {
-  font-family: FontAwesome;
+  /*font-family: FontAwesome;
   font-weight: 400;
   content: "\f0da";
-  padding-right: 10px;
+  padding-right: 10px;*/
 }
 
 render-desktop div.left > img {
