@@ -26,6 +26,7 @@ render-desktop #col1 wrapper1 {
 render-desktop #col1 wrapper1 item {
   display: block;
   padding: 20px 45px;
+  font-size: 16px;
 }
 render-desktop #col1 wrapper1 item.itemselect {
   background-color: #777777;
@@ -56,6 +57,7 @@ render-desktop #col2 wrapper2 div.right ul li a {
   padding-left: 15px;
   text-decoration: none;
   color: black;
+  font-size: 16px;
 }
 
 render-desktop #col2 wrapper2 div.right ul li a:hover {
