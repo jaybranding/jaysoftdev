@@ -124,14 +124,14 @@ $.getJSON(menuAPI, {
 
   if (width < 830) {
     //mobile & tablet
-    $("navm").html(mainmenum);
-    $("popupm").html(popupm);
+    $("render-mobile navm").html(mainmenum);
+    $("render-mobile popupm").html(popupm);
     $("render-desktop").remove();
   } else {
     //desktop
-    $("nav").html(mainmenu);
-    $("#col1").html(submenuCol1);
-    $("#col2").html(submenuCol2);
+    $("render-desktop nav").html(mainmenu);
+    $("render-desktop #col1").html(submenuCol1);
+    $("render-desktop #col2").html(submenuCol2);
     $("render-mobile").remove();
   }
 
