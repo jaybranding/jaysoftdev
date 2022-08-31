@@ -126,11 +126,14 @@ render-desktop div.left > img {
   max-width: 300px;
 }
 render-mobile {
-  overflow: hidden;
+  overflow-x: hidden;
   position: fixed;
   width: 100%;
   top: 0px;
+  left: 100vh;
   background-color: white;
+  z-index: 100000;
+  transition: ease-in-out 0.5s;
 }
 
 render-mobile navm .navmhead {

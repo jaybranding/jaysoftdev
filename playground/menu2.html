@@ -19,6 +19,16 @@
     <link rel="stylesheet" href="css/ogw-menu-style.css" />
 
     <script src="js/ogw-menu.js" defer></script>
+    <script>
+      $(function () {
+        $("#btn-menu-main-container").click(function (e) {
+          $("render-mobile").css({
+            left: "0px",
+          });
+          e.preventDefault();
+        });
+      });
+    </script>
   </head>
 
   <body style="margin: 0px">
