@@ -1,6 +1,17 @@
 #menu-main-container {
   display: none;
 }
+
+@media only screen and (max-width: 768px) {
+  render-desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 769px) {
+  render-mobile {
+    display: none;
+  }
+}
 render-desktop nav {
   display: flex;
   justify-content: space-around;
@@ -116,27 +127,64 @@ render-desktop div.left > img {
 }
 render-mobile {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  background-color: white;
+}
+
+render-mobile navm .navmhead {
+  padding: 20px 10px;
+  display: block;
+}
+render-mobile navm {
+  padding: 20px 10px;
+  display: block;
+}
+
+render-mobile #closenavm {
+  color: rgb(34, 34, 34);
+  float: right;
+  padding: 15px;
 }
 render-mobile itemm {
   display: block;
   padding: 10px 5px;
-  border-bottom: solid #777777 1px;
+  border-bottom: solid rgb(238, 238, 238) 1px;
   font-size: 14px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: bold;
 }
 
 render-mobile itemm span.icon {
+  float: right;
+  padding-right: 10px;
 }
 render-mobile subitemms {
   display: flex;
   flex-wrap: wrap;
-  background-color: aqua;
   overflow: hidden;
 }
 render-mobile subitemms subitemm {
   width: 50%;
   text-align: center;
+}
+
+render-mobile subitemms collection {
+  /* position: absolute; */
+  /* bottom: 10px; */
+  width: 100%;
+  /* align-items: center; */
+  text-align: center;
+  padding: 20px 0px;
+}
+render-mobile subitemms collection a {
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(34, 34, 34);
+  text-decoration: none;
 }
 render-mobile subitemms subitemm img {
   max-height: 100px;
@@ -171,6 +219,15 @@ render-mobile wrapperm container {
   -webkit-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
   -moz-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
 }
+render-mobile wrapperm container .close {
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+}
+render-mobile wrapperm container .close svg {
+  float: left;
+}
 render-mobile wrapperm overlay {
   background-color: rgba(0, 0, 0, 0);
   width: 100vw;
@@ -189,6 +246,10 @@ render-mobile wrapperm .left {
   float: left;
 }
 
+render-mobile popupm wrapperm img {
+  max-width: 100%;
+}
+
 render-mobile .selectednav {
   animation: slide-in ease-in-out 0.5s forwards;
   -webkit-animation: slide-in ease-in-out 0.5s forwards;
@@ -198,7 +259,28 @@ render-mobile .dismissnav {
   animation: slide-out ease-in-out 0.5s forwards;
   -webkit-animation: slide-out ease-in-out 0.5s forwards;
 }
+render-mobile popupm wrapperm container li {
+  display: block;
+  border-bottom: solid rgb(238, 238, 238) 1px;
+  padding: 5px 0px;
+}
+render-mobile popupm wrapperm container h4 {
+  margin: 5px 0px;
+  font-family: "Source Sans Pro", Sans-serif;
+}
+render-mobile popupm wrapperm container li a {
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+}
 
+render-mobile popupm wrapperm container li a i {
+  display: inline-block;
+  padding-right: 5px;
+}
 @keyframes slide-in {
   0% {
     -webkit-transform: translateX(100%);

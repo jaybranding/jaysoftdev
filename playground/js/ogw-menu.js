@@ -7,7 +7,12 @@ $.getJSON(menuAPI, {
 }).done(function (data) {
   //loop menu main
   var mainmenu = "";
-  var mainmenum = "";
+  var mainmenum =
+    "<div class=navmhead>" +
+    '<a href="/"><img width="156" height="37" src="https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/01/Logo-Ogawa.png.webp" class="attachment-full size-full" alt="" srcset="https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/01/Logo-Ogawa.png.webp 156w,https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/01/Logo-Ogawa-150x37.png.webp 150w,https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/01/Logo-Ogawa-18x4.png.webp 18w" sizes="(max-width: 156px) 100vw, 156px"></a>' +
+    "<div id=closenavm>" +
+    '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>' +
+    "</div></div>";
 
   var popupm = "";
 
@@ -31,7 +36,7 @@ $.getJSON(menuAPI, {
       [i] +
       ">" +
       data[i].navigation.title +
-      "<span class=icon><i aria-hidden=true class='fa-fw icon icon-chevron-left'></i></span></itemm>" +
+      '<span class="icon icoright"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/></svg></span></itemm>' +
       "<subitemms link=" +
       [i] +
       ">";
@@ -82,9 +87,15 @@ $.getJSON(menuAPI, {
         popupm +
         "<wrapperm aria-controls=" +
         ariacontrols +
-        "><container>" +
-        "<div class='close left'><i aria-hidden=true class='fa-fw icon icon-chevron-left'></i> Back to Home</div> <div class='closeright'><i aria-hidden='true' class='icon icon-cross'></i></div>" +
-        "<div><img src=" +
+        " ><container>" +
+        "<div class='close left' aria-controls=" +
+        ariacontrols +
+        ">" +
+        '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"/></svg>' +
+        " Menu</div> <div class='close right' aria-controls=" +
+        ariacontrols +
+        '><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg></div>' +
+        "<div class=image><img src=" +
         data[i].navigation.item[j].imgURL +
         " /></div>" +
         "<h4>" +
@@ -99,16 +110,24 @@ $.getJSON(menuAPI, {
         //popup menu
         popupm =
           popupm +
-          `<li><a href="${data[i].navigation.item[j].menu[x].URL}"><i class="fas fa-caret-right"></i>${data[i].navigation.item[j].menu[x].text}</a></li>`;
+          `<li><a href="${data[i].navigation.item[j].menu[x].URL}">
+          <i class="fas fa-caret-right"></i>
+        ${data[i].navigation.item[j].menu[x].text}</a></li>`;
       });
 
-      popupm = popupm + "</container><overlay></overlay></wrapperm>"; // closing m
+      popupm =
+        popupm +
+        "</container><overlay aria-controls=" +
+        ariacontrols +
+        "></overlay></wrapperm>"; // closing m
       submenuCol2 = submenuCol2 + "</ul></div>"; //closing right
       submenuCol2 = submenuCol2 + "</wrapper2>"; //cloding wrapper2
     });
 
     submenuCol1 = submenuCol1 + "</wrapper1>"; //close reapper1
-    mainmenum = mainmenum + "</subitemms>";
+    mainmenum =
+      mainmenum +
+      "<collection><a href='/mua-sam'>Bộ Sưu Tập</a></collection></subitemms>";
   });
 
   //action after success
@@ -122,7 +141,7 @@ $.getJSON(menuAPI, {
 
   const { width } = getWindowDimensions();
 
-  if (width < 830) {
+  if (width < 769) {
     //mobile & tablet
     $("render-mobile navm").html(mainmenum);
     $("render-mobile popupm").html(popupm);
@@ -191,21 +210,26 @@ $.getJSON(menuAPI, {
     $("subitemms[link=" + obj + "]").slideToggle();
   });
 
-  $("wrapperm").addClass("dismissnav");
+  //$("wrapperm").addClass("dismissnav");
 
   $("subitemm").click(function () {
     obj = $(this).attr("aria-controls");
-    if ($("wrapperm[aria-controls=" + obj + "]").hasClass("dismissnav")) {
-      $("wrapperm[aria-controls=" + obj + "]")
-        .removeClass("dismissnav")
-        .addClass("selectednav")
-        .show();
-    }
+    //if ($("wrapperm[aria-controls=" + obj + "]").hasClass("dismissnav")) {
+    $("wrapperm[aria-controls=" + obj + "]")
+      .removeClass("dismissnav")
+      .addClass("selectednav")
+      .show();
+    //}
   });
   $(".close, overlay").click(function () {
-    var parent = $(".close").parent().parent();
-    parent.removeClass("absolutenav");
-    parent.removeClass("selectednav").addClass("dismissnav");
+    obj = $(this).attr("aria-controls");
+    $("wrapperm[aria-controls=" + obj + "]")
+      .removeClass("selectednav")
+      .addClass("dismissnav")
+      .show();
+    //parent.removeClass("absolutenav");
+    //parent.removeClass("selectednav").addClass("dismissnav");
+    console.log(obj);
   });
 });
 
