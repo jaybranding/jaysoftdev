@@ -6,6 +6,13 @@ render-desktop nav .menu-item {
   padding: 12px 15px;
   font-size: 12px;
   font-family: "Source Sans Pro", sans-serif;
+  border-bottom: 0px solid rgb(34, 34, 34);
+  transition: 0.5s;
+}
+
+render-desktop nav .menu-item:hover {
+  border-bottom: 3px solid rgb(34, 34, 34);
+  cursor: pointer;
 }
 
 render-desktop sub {
@@ -29,6 +36,8 @@ render-desktop #col1 wrapper1 item {
   padding: 20px 45px;
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
 }
 render-desktop #col1 wrapper1 item i {
   visibility: hidden;
@@ -69,6 +78,7 @@ render-desktop #col2 wrapper2 div.right ul li a {
   color: black;
   font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
 }
 render-desktop #col2 wrapper2 div.right ul li a i {
   visibility: hidden;
@@ -78,6 +88,7 @@ render-desktop #col2 wrapper2 div.right ul li a i {
 
 render-desktop #col2 wrapper2 div.right ul li a:hover {
   text-decoration: underline;
+  font-weight: bold;
 }
 render-desktop #col2 wrapper2 div.right ul li a:hover i {
   visibility: visible;
