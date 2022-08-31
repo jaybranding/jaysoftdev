@@ -1,4 +1,4 @@
-var menuAPI = "https://jaysoft.dev/playground/menu-ogw.json";
+var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
 
 //get json and print
 $.getJSON(menuAPI, {

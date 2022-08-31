@@ -6,8 +6,9 @@ render-desktop nav .menu-item {
   padding: 12px 15px;
   font-size: 12px;
   font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
   border-bottom: 0px solid rgb(34, 34, 34);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 render-desktop nav .menu-item:hover {
