@@ -1,10 +1,10 @@
 render-desktop nav {
   display: flex;
   justify-content: space-around;
-  background-color: antiquewhite;
 }
 render-desktop nav .menu-item {
   padding: 10px 20px;
+  font-size: 12px;
 }
 
 render-desktop sub {
@@ -68,7 +68,8 @@ render-desktop #col2 wrapper2 div.right ul li a:hover::before {
   content: "\f0da";
   padding-right: 10px;
 }
-render-desktop img {
+
+render-desktop div.left > img {
   max-width: 300px;
 }
 render-mobile {
