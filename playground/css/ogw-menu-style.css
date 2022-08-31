@@ -24,10 +24,10 @@ render-desktop sub {
 render-desktop .row {
   display: flex;
   width: 1140px;
-  padding: 40px 0px;
 }
 render-desktop #col1 {
   width: 300px;
+  padding: 40px 0px;
 }
 render-desktop #col1 wrapper1 {
   display: block;
@@ -61,6 +61,11 @@ render-desktop #col1 wrapper1 item.itemselect::before {
     content: "\f0da";
     padding-right: 10px;*/
 }
+
+render-desktop #col2 {
+  padding: 40px 0px;
+}
+
 render-desktop #col2 wrapper2 {
   display: flex;
 }
