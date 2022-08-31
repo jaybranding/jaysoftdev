@@ -143,6 +143,7 @@ $.getJSON(menuAPI, {
   $(".menu-item").mouseenter(function () {
     $("wrapper1").hide();
     $("wrapper2").hide();
+    $("#menu-main-container").slideUp();
 
     obj = $(this).attr("link");
     $("wrapper1[link=" + obj + "]").slideDown();
