@@ -136,7 +136,7 @@ $.getJSON(menuAPI, {
       "</div><div id=col2>" +
       submenuCol2 +
       "</div>";
-    $("render-desktop sub row").html(rowhtml);
+    $("render-desktop sub .row").html(rowhtml);
     //$("render-desktop #col1").html(submenuCol1);
     //$("render-desktop #col2").html(submenuCol2);
     $("render-mobile").remove();
