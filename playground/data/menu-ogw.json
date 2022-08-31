@@ -365,11 +365,11 @@
       "item": [
         {
           "title": "Sắp Ra Mắt",
-          "imgURL": "",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/01/Logo-Ogawa.png.webp",
           "menu": [
             {
-              "text": "Khám Phá Thêm",
-              "URL": ""
+              "text": "Sắp Ra Mắt",
+              "URL": "/"
             }
           ]
         }
