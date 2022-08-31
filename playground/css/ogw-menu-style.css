@@ -1,74 +1,74 @@
-nav {
+render-desktop nav {
   display: flex;
   justify-content: space-around;
   background-color: antiquewhite;
 }
-nav .menu-item {
+render-desktop nav .menu-item {
   padding: 10px 20px;
 }
 
-sub {
+render-desktop sub {
   display: flex;
   justify-content: center;
 }
 
-.row {
+render-desktop .row {
   display: flex;
   width: 1140px;
   padding: 40px 0px;
 }
-#col1 {
+render-desktop #col1 {
   width: 300px;
 }
-#col1 wrapper1 {
+render-desktop #col1 wrapper1 {
   display: block;
 }
-#col1 wrapper1 item {
+render-desktop #col1 wrapper1 item {
   display: block;
   padding: 20px 45px;
 }
-#col1 wrapper1 item.itemselect {
+render-desktop #col1 wrapper1 item.itemselect {
   background-color: #777777;
   border-radius: 50px;
   color: white;
   padding-left: 31px;
 }
 
-#col1 wrapper1 item.itemselect::before {
+render-desktop #col1 wrapper1 item.itemselect::before {
   /*font-family: FontAwesome;
     font-weight: 400;
     content: "\f0da";
     padding-right: 10px;*/
 }
-#col2 wrapper2 {
+render-desktop #col2 wrapper2 {
   display: flex;
 }
 
-#col2 wrapper2 div.right ul {
+render-desktop #col2 wrapper2 div.right ul {
   list-style: none;
 }
 
-#col2 wrapper2 div.right ul li {
+render-desktop #col2 wrapper2 div.right ul li {
   padding: 10px 20px;
 }
 
-#col2 wrapper2 div.right ul li a {
+render-desktop #col2 wrapper2 div.right ul li a {
   padding-left: 15px;
   text-decoration: none;
   color: black;
 }
 
-#col2 wrapper2 div.right ul li a:hover {
+render-desktop #col2 wrapper2 div.right ul li a:hover {
   padding-left: 0px;
 }
 
-#col2 wrapper2 div.right ul li a:hover::before {
+render-desktop #col2 wrapper2 div.right ul li a:hover::before {
   font-family: FontAwesome;
   font-weight: 400;
   content: "\f0da";
   padding-right: 10px;
 }
-img {
+render-desktop img {
   max-width: 300px;
 }
 render-mobile {
@@ -100,10 +100,10 @@ render-mobile subitemms subitemm img {
 render-mobile subitemms subitemm h4 {
   margin: 0px 2px;
 }
-wrapperm {
+render-mobile wrapperm {
   display: none;
 }
-wrapperm {
+render-mobile wrapperm {
   position: fixed;
   height: 100vh;
   width: 100vw;
@@ -113,7 +113,7 @@ wrapperm {
   -webkit-transform: translateX(100%);
   z-index: 1000;
 }
-wrapperm container {
+render-mobile wrapperm container {
   width: 350px;
   height: 100vh;
   background-color: white;
@@ -124,7 +124,7 @@ wrapperm container {
   -webkit-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
   -moz-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
 }
-wrapperm overlay {
+render-mobile wrapperm overlay {
   background-color: rgba(0, 0, 0, 0);
   width: 100vw;
   height: 100vh;
@@ -133,21 +133,21 @@ wrapperm overlay {
   top: 0;
   z-index: -1;
 }
-wrapperm .right {
+render-mobile wrapperm .right {
   display: inline;
   float: right;
 }
-wrapperm .left {
+render-mobile wrapperm .left {
   display: inline;
   float: left;
 }
 
-.selectednav {
+render-mobile .selectednav {
   animation: slide-in ease-in-out 0.5s forwards;
   -webkit-animation: slide-in ease-in-out 0.5s forwards;
 }
 
-.dismissnav {
+render-mobile .dismissnav {
   animation: slide-out ease-in-out 0.5s forwards;
   -webkit-animation: slide-out ease-in-out 0.5s forwards;
 }
