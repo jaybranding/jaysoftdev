@@ -1,9 +1,14 @@
 var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
-
-//button function
-$("#btn-menu-main-container").mouseenter(function () {
+$(function () {
+  //button function
   $("#menu-main-container").hide();
-  $("#menu-main-container").slideDown();
+
+  $("#btn-menu-main-container").mouseenter(function () {
+    $("#menu-main-container").slideDown();
+  });
+  $("#menu-main-container").mouseleave(function () {
+    $("#menu-main-container").slideUp();
+  });
 });
 
 //get json and print
