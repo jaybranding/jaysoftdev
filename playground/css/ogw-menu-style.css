@@ -27,10 +27,10 @@ render-desktop .row {
 }
 render-desktop #col1 {
   width: 300px;
-  padding: 40px 0px 100px 0px;
 }
 render-desktop #col1 wrapper1 {
   display: block;
+  padding: 40px 0px 100px 0px;
 }
 render-desktop #col1 wrapper1 item {
   display: block;
@@ -63,11 +63,11 @@ render-desktop #col1 wrapper1 item.itemselect::before {
 }
 
 render-desktop #col2 {
-  padding: 40px 0px 100px 0px;
 }
 
 render-desktop #col2 wrapper2 {
   display: flex;
+  padding: 40px 0px 100px 0px;
 }
 
 render-desktop #col2 wrapper2 div.right ul {
