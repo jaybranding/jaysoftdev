@@ -121,11 +121,12 @@ render-mobile itemm {
   display: block;
   padding: 10px 5px;
   border-bottom: solid #777777 1px;
+  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
 }
 
 render-mobile itemm span.icon {
-  float: right;
-  margin-right: 10px;
 }
 render-mobile subitemms {
   display: flex;
@@ -142,6 +143,9 @@ render-mobile subitemms subitemm img {
 }
 render-mobile subitemms subitemm h4 {
   margin: 0px 2px;
+  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
 }
 render-mobile wrapperm {
   display: none;
