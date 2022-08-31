@@ -133,7 +133,7 @@ render-mobile {
   left: 100vh;
   background-color: white;
   z-index: 100000;
-  transition: cubic-bezier(0.34, 0.94, 0.73, 0.74) 0.5s;
+  transition: cubic-bezier(0.34, 0.94, 0.73, 0.74) 0.3s;
   height: 100vh;
 }
 
