@@ -168,6 +168,7 @@ render-mobile subitemms {
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
+  padding: 20px;
 }
 render-mobile subitemms subitemm {
   width: 50%;
