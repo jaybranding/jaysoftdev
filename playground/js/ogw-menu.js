@@ -148,9 +148,9 @@ $.getJSON(menuAPI, {
   $("wrapper2").hide();
 
   $(".menu-item").mouseenter(function () {
-    $("wrapper1").fadeOut();
-    $("wrapper2").fadeOut();
-    $("#menu-main-container").fadeOut();
+    $("wrapper1").hide();
+    $("wrapper2").hide();
+    $("#menu-main-container").hide();
 
     obj = $(this).attr("link");
     $("wrapper1[link=" + obj + "]").slideDown();
