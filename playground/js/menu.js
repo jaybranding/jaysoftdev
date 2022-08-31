@@ -31,7 +31,7 @@ $.getJSON(menuAPI, {
       [i] +
       ">" +
       data[i].navigation.title +
-      "<span class=icon>x</span></itemm>" +
+      "<span class=icon><i aria-hidden=true class='fa-fw icon icon-chevron-left'></i></span></itemm>" +
       "<subitemms link=" +
       [i] +
       ">";
@@ -83,7 +83,7 @@ $.getJSON(menuAPI, {
         "<wrapperm aria-controls=" +
         ariacontrols +
         "><container>" +
-        "<div class='close left'>Back to Home</div><div class='close right'>x</div>" +
+        "<div class='close left'><i aria-hidden=true class='fa-fw icon icon-chevron-left'></i> Back to Home</div> <div class='closeright'><i aria-hidden='true' class='icon icon-cross'></i></div>" +
         "<div><img src=" +
         data[i].navigation.item[j].imgURL +
         " /></div>" +
@@ -178,8 +178,6 @@ $.getJSON(menuAPI, {
   $("subitemms").hide();
   //$("wrapperm").hide();
   $("itemm").click(function () {
-    $("subitemms").slideUp();
-
     obj = $(this).attr("link");
     $("subitemms[link=" + obj + "]").slideToggle();
   });
