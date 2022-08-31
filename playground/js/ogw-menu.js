@@ -14,6 +14,7 @@ $(function () {
       "<div id='closenavm'>" +
       '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16"><path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z"/></svg>' +
       "</div></div>";
+    var pathnameLang = window.location.pathname.slice(0, 4); // Returns path only (/path/example.html)
 
     var popupm = "";
 
@@ -104,14 +105,19 @@ $(function () {
           "</h4>";
         //loop 3rd
         $.each(data[i].navigation.item[j].menu, function (x, item) {
+          if (pathnameLang == "/en/") {
+            pathURL = "/en" + data[i].navigation.item[j].menu[x].URL;
+          } else {
+            pathURL = "/en" + data[i].navigation.item[j].menu[x].URL;
+          }
           submenuCol2 =
             submenuCol2 +
-            `<li><a href="${data[i].navigation.item[j].menu[x].URL}"><i class="fas fa-caret-right"></i>${data[i].navigation.item[j].menu[x].text}</a></li>`;
+            `<li><a href="${pathURL}"><i class="fas fa-caret-right"></i>${data[i].navigation.item[j].menu[x].text}</a></li>`;
 
           //popup menu
           popupm =
             popupm +
-            `<li><a href="${data[i].navigation.item[j].menu[x].URL}">
+            `<li><a href="${pathURL}">
           <i class="fas fa-caret-right"></i>
         ${data[i].navigation.item[j].menu[x].text}</a></li>`;
         });

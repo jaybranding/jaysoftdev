@@ -27,6 +27,9 @@
           });
           e.preventDefault();
         });
+
+        var pathname = window.location.pathname.slice(0, 4); // Returns path only (/path/example.html)
+        console.log(pathname);
       });
     </script>
   </head>
