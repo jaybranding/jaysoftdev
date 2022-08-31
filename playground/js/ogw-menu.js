@@ -203,12 +203,16 @@ $.getJSON(menuAPI, {
 });
 
 $(function () {
+  //ẩn sub
+  //$("sub").hide();
+
   //button function
   $("#menu-main-container").hide();
 
   $("#btn-menu-main-container").mouseenter(function () {
     $("wrapper1").hide();
     $("wrapper2").hide();
+
     $("#menu-main-container").slideDown();
   });
   $("#menu-main-container").mouseleave(function () {
