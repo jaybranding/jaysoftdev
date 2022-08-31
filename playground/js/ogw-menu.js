@@ -161,6 +161,17 @@ $.getJSON(menuAPI, {
     $("render-mobile").remove();
   }
 */
+  $("render-mobile navm").html(mainmenum);
+  $("render-mobile popupm").html(popupm);
+  $("render-desktop nav").html(mainmenu);
+  var rowhtml =
+    "<div id=col1>" +
+    submenuCol1 +
+    "</div><div id=col2>" +
+    submenuCol2 +
+    "</div>";
+  $("render-desktop sub .row").html(rowhtml);
+
   //action of menu
   //$("sub").hide();
   $("wrapper1").hide();
