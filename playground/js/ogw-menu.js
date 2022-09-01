@@ -1,11 +1,31 @@
 $(function () {
-  var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
+  if (OGWmenuData == null) {
+    var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
+  } else {
+    //now we retrieve the object again, but in a string form.
+    var OGWmenuDatastr = localStorage.getItem("OGWmenuDatajson");
+
+    //to get the object we have to parse it.
+    var OGWmenuData = JSON.parse(OGWmenuDatastr);
+    var menuAPI = OGWmenuData;
+  }
 
   //get json and print
   $.getJSON(menuAPI, {
     format: "json",
     async: true,
   }).done(function (data) {
+    //condition to push data to localstroage
+
+    if (OGWmenuData == null) {
+      localStorage.setItem("OGWmenuDatajson", JSON.stringify(data));
+
+      //now we retrieve the object again, but in a string form.
+      var OGWmenuDatastr = localStorage.getItem("OGWmenuDatajson");
+
+      //to get the object we have to parse it.
+      var OGWmenuData = JSON.parse(OGWmenuDatastr);
+    }
     //loop menu main
     var mainmenu = "";
     var mainmenum =
