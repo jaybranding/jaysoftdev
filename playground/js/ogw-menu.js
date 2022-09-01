@@ -133,7 +133,7 @@ $(function () {
           }
           submenuCol2 =
             submenuCol2 +
-            `<li><a href="${pathURL}"><i class="fas fa-caret-right"></i>${data[i].navigation.item[j].menu[x].text}</a></li>`;
+            `<li><a href="${pathURL}"><i class="fas fa-caret-right" style="font-size: 10px;"></i>${data[i].navigation.item[j].menu[x].text}</a></li>`;
 
           //popup menu
           popupm =
