@@ -272,7 +272,7 @@ render-mobile popupm wrapperm container li {
 }
 render-mobile popupm wrapperm container h4 {
   margin: 5px 0px;
-  font-family: "Source Sans Pro", Sans-serif;
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
 }
 render-mobile popupm wrapperm container li a {
   font-family: "Source Sans Pro", Sans-serif;
