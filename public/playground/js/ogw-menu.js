@@ -1,4 +1,4 @@
-$(function () {
+/*$(function () {
   if (OGWmenuData == null) {
     var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
   } else {
@@ -8,7 +8,8 @@ $(function () {
     //to get the object we have to parse it.
     var OGWmenuData = JSON.parse(OGWmenuDatastr);
     var menuAPI = OGWmenuData;
-  }
+  }*/
+  var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
 
   //get json and print
   $.getJSON(menuAPI, {
