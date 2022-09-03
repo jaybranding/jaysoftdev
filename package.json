@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "dotenv": "^16.0.2",
+    "mongodb": "^4.9.1",
     "parcel-bundler": "^1.6.1"
   },
-  "scripts": {},
-  "devDependencies": {}
+  "scripts": {}
 }
