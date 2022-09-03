@@ -9,69 +9,19 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/master-drive-ai/"
+              "URL": "/mua-sam/master-drive-ai/"
             },
             {
               "text": "Nghiên Cứu Về Dòng Master Drive",
-              "URL": "https://ogawaworld.vn/cong-nghe/"
+              "URL": "/cong-nghe/"
             },
             {
               "text": "Chương Trình Trải Nghiệm",
-              "URL": "https://ogawaworld.vn/trai-nghiem/"
+              "URL": "/trai-nghiem/"
             },
             {
               "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
-            }
-          ]
-        },
-        {
-          "title": "Neo Rev",
-          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/03/OGAWA-NEO-rev-1.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/neo-rev/"
-            },
-            {
-              "text": "Chương Trình Trải Nghiệm",
-              "URL": "https://ogawaworld.vn/trai-nghiem/"
-            },
-            {
-              "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
-            }
-          ]
-        },
-        {
-          "title": "Zen Master P",
-          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/03/Rectangle-246.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/zen-masters-p/"
-            },
-            {
-              "text": "Chương Trình Trải Nghiệm",
-              "URL": "https://ogawaworld.vn/trai-nghiem/"
-            },
-            {
-              "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
-            }
-          ]
-        },
-        {
-          "title": "Cosmo-X",
-          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/03/X-Cosmo-small.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/x-cosmo/"
-            },
-            {
-              "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
+              "URL": "/bo-suu-tap/"
             }
           ]
         },
@@ -81,11 +31,61 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/smart-jazz/"
+              "URL": "/mua-sam/smart-jazz/"
             },
             {
               "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
+              "URL": "/bo-suu-tap/"
+            }
+          ]
+        },
+        {
+          "title": "Neo Rev",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/03/OGAWA-NEO-rev-1.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "/mua-sam/neo-rev/"
+            },
+            {
+              "text": "Chương Trình Trải Nghiệm",
+              "URL": "/trai-nghiem/"
+            },
+            {
+              "text": "Bộ Sưu Tập",
+              "URL": "/bo-suu-tap/"
+            }
+          ]
+        },
+        {
+          "title": "Zen Master P",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/03/Rectangle-246.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "/mua-sam/zen-masters-p/"
+            },
+            {
+              "text": "Chương Trình Trải Nghiệm",
+              "URL": "/trai-nghiem/"
+            },
+            {
+              "text": "Bộ Sưu Tập",
+              "URL": "/bo-suu-tap/"
+            }
+          ]
+        },
+        {
+          "title": "X Cosmo",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/03/X-Cosmo-small.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "/mua-sam/x-cosmo/"
+            },
+            {
+              "text": "Bộ Sưu Tập",
+              "URL": "/bo-suu-tap/"
             }
           ]
         },
@@ -95,25 +95,25 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/my-sofa-luxe/"
+              "URL": "/mua-sam/my-sofa-luxe/"
             },
             {
               "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
+              "URL": "/bo-suu-tap/"
             }
           ]
         },
         {
-          "title": "Smart Vogue",
+          "title": "Smart Vogue Prime",
           "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Smart-Voguer-Prime-1-600x600.png.webp",
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/smart-vogue-prime/"
+              "URL": "/mua-sam/smart-vogue-prime/"
             },
             {
               "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
+              "URL": "/bo-suu-tap/"
             }
           ]
         },
@@ -123,11 +123,11 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/luxe-armour-sofa/"
+              "URL": "/mua-sam/luxe-armour-sofa/"
             },
             {
               "text": "Bộ Sưu Tập",
-              "URL": "https://ogawaworld.vn/bo-suu-tap/"
+              "URL": "/bo-suu-tap/"
             }
           ]
         }
@@ -144,7 +144,7 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/omknee-20/"
+              "URL": "/mua-sam/omknee-20/"
             }
           ]
         },
@@ -154,37 +154,37 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/zen-foottee/"
+              "URL": "/mua-sam/zen-foottee/"
             }
           ]
         },
         {
-          "title": "Comfy",
+          "title": "Comfy Foot Massage",
           "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Comefy-Therapy-600x600.png.webp",
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/comfy-foot-massage/"
+              "URL": "/mua-sam/comfy-foot-massage/"
             }
           ]
         },
         {
-          "title": "EliteX 3D",
-          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Elite-3D-Foot-600x600.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/elitex-3d-foot-reflexology/"
-            }
-          ]
-        },
-        {
-          "title": "ISpa Steam",
+          "title": "ISpa Steam Foot Massager",
           "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/iSpa-Steam-Foot-Massager-600x600.png.webp",
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/ispa-steam-foot-massager/"
+              "URL": "/mua-sam/ispa-steam-foot-massager/"
+            }
+          ]
+        },
+        {
+          "title": "EliteX 3D Foot Reflexology",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Elite-3D-Foot-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "/mua-sam/elitex-3d-foot-reflexology/"
             }
           ]
         }
@@ -196,32 +196,12 @@
       "title": "Thể Dục",
       "item": [
         {
-          "title": "Trek Pro T7.2 Lite",
+          "title": "Trek Pro T7.2 Lite Treadmill",
           "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Treck-Pro-T7.2.png.webp",
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/trek-pro-t7-2-lite-treadmill/"
-            }
-          ]
-        },
-        {
-          "title": "iFit",
-          "imgURL": "https://ogawaworld.vn/wp-content/uploads/2022/09/01-Ifit-tread-mill.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/ifit/"
-            }
-          ]
-        },
-        {
-          "title": "EZ Wave",
-          "imgURL": "https://gigamall.com.vn/data/2019/08/05/15173555_logo-ogawa-500x500.jpg",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/ez-wave//"
+              "URL": "/mua-sam/trek-pro-t7-2-lite-treadmill/"
             }
           ]
         }
@@ -230,7 +210,7 @@
   },
   {
     "navigation": {
-      "title": "Đệm/Gối Massage",
+      "title": "Đệm Massage",
       "item": [
         {
           "title": "Mobile Seat Max",
@@ -238,17 +218,7 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/mobile-seat-xe-max/"
-            }
-          ]
-        },
-        {
-          "title": "Mobile Seat DUO",
-          "imgURL": "https://ogawaworld.vn/wp-content/uploads/2022/09/01-Mobile-Seat-XE-DUO.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/mobile-seat-xe-duo/"
+              "URL": "/mua-sam/mobile-seat-xe-max/"
             }
           ]
         },
@@ -258,7 +228,27 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/ogawa-mobile-seat-xe-mini/"
+              "URL": "/mua-sam/ogawa-mobile-seat-xe-mini/"
+            }
+          ]
+        },
+        {
+          "title": "Mobile Shiatshu Max",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Mobile-Shiatshu-Max-1-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "/mua-sam/mobile-shiatshu-max/"
+            }
+          ]
+        },
+        {
+          "title": "Mobile Shiatshu LITE",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Shiatsu-lite-600x600.png.webp",
+          "menu": [
+            {
+              "text": "Khám Phá Thêm",
+              "URL": "/mua-sam/mobile-shiatsu-lite/"
             }
           ]
         },
@@ -268,47 +258,17 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/mobile-seat-xe-prime/"
+              "URL": "/mua-sam/mobile-seat-xe-prime/"
             }
           ]
         },
         {
-          "title": "Shiatshu Max",
-          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Mobile-Shiatshu-Max-1-600x600.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/mobile-shiatshu-max/"
-            }
-          ]
-        },
-        {
-          "title": "Shiatshu LITE",
-          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Shiatsu-lite-600x600.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/mobile-shiatsu-lite/"
-            }
-          ]
-        },
-        {
-          "title": "Shiatshu QT",
-          "imgURL": "https://ogawaworld.vn/wp-content/uploads/2022/09/02-Mobile-Shiatshu-QT.png.webp",
-          "menu": [
-            {
-              "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/shiatshu-qt/"
-            }
-          ]
-        },
-        {
-          "title": "Comfi Back",
+          "title": "Comfi Back Lower Back",
           "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Comfi-back-600x600.png.webp",
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/comfi-back-lower-back/"
+              "URL": "/mua-sam/comfi-back-lower-back/"
             }
           ]
         },
@@ -318,7 +278,7 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/tinkle-touch/"
+              "URL": "/mua-sam/tinkle-touch/"
             }
           ]
         }
@@ -335,7 +295,7 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/snazzy-touch/"
+              "URL": "/mua-sam/snazzy-touch/"
             }
           ]
         },
@@ -345,7 +305,7 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/snazzy-touch-plus/"
+              "URL": "/mua-sam/snazzy-touch-plus/"
             }
           ]
         },
@@ -355,7 +315,7 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/vivid-touch/"
+              "URL": "/mua-sam/vivid-touch/"
             }
           ]
         }
@@ -364,7 +324,7 @@
   },
   {
     "navigation": {
-      "title": "Làm Đẹp",
+      "title": "Thiết Bị Làm Đẹp",
       "item": [
         {
           "title": "Smart Eye Massager",
@@ -372,17 +332,17 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/smart-eye-massager/"
+              "URL": "/mua-sam/smart-eye-massager/"
             }
           ]
         },
         {
           "title": "Slimming Belt",
-          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Smart-Eye-Massager-2.png.webp",
+          "imgURL": "https://ogawa.cdn.jaysoft.asia/wp-content/uploads/2022/04/Slimming-belt.png.webp",
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/slimming-belt/"
+              "URL": "/mua-sam/slimming-belt/"
             }
           ]
         },
@@ -392,7 +352,7 @@
           "menu": [
             {
               "text": "Khám Phá Thêm",
-              "URL": "https://ogawaworld.vn/mua-sam/usb-eye-mask/"
+              "URL": "/mua-sam/usb-eye-mask/"
             }
           ]
         }
@@ -401,15 +361,15 @@
   },
   {
     "navigation": {
-      "title": "Gia Dụng",
+      "title": "Thiết Bị Gia Dụng",
       "item": [
         {
           "title": "Sắp Ra Mắt",
-          "imgURL": "",
+          "imgURL": "https://gigamall.com.vn/data/2019/08/05/15173555_logo-ogawa-500x500.jpg",
           "menu": [
             {
-              "text": "Khám Phá Thêm",
-              "URL": ""
+              "text": "Sắp Ra Mắt",
+              "URL": "/"
             }
           ]
         }
