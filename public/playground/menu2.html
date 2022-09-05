@@ -21,6 +21,11 @@
     <script src="js/ogw-menu.js" defer></script>
     <script>
       $(function () {
+        pathURL = "https://ogawaworld.vn/xin-chao";
+        if (pathURL.includes("https://ogawaworld.vn/")) {
+          pathURL = pathURL.replace("https://ogawaworld.vn/", "/");
+          console.log(pathURL);
+        }
         $("#btn-menu-main-container").click(function (e) {
           $("render-mobile").css({
             left: "0px",

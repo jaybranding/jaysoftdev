@@ -132,8 +132,8 @@ $(document).ready(function () {
         //loop 3rd
         $.each(data[i].navigation.item[j].menu, function (x, item) {
           pathURL = data[i].navigation.item[j].menu[x].URL;
-          if (pathURL.search("https://ogawaworld.vn/") != "") {
-            pathURL.replace("https://ogawaworld.vn/", "/");
+          if (pathURL.includes("https://ogawaworld.vn/")) {
+            pathURL = pathURL.replace("https://ogawaworld.vn/", "/");
           }
           if (pathnameLang == "/en/") {
             pathURL = "/en" + pathURL;
