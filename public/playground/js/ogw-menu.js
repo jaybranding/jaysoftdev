@@ -13,6 +13,7 @@ $(document).ready(function () {
     var menuAPI = OGWmenuData;
   }*/
   var menuAPI = "https://jaysoft.dev/playground/data/menu-ogw.json";
+  //var menuAPI = "../playground/data/menu-ogw.json";
 
   //get json and print
   $.getJSON(menuAPI, {
@@ -130,10 +131,14 @@ $(document).ready(function () {
           "</h4>";
         //loop 3rd
         $.each(data[i].navigation.item[j].menu, function (x, item) {
+          pathURL = data[i].navigation.item[j].menu[x].URL;
+          if (pathURL.search("https://ogawaworld.vn/") != "") {
+            pathURL.replace("https://ogawaworld.vn/", "/");
+          }
           if (pathnameLang == "/en/") {
-            pathURL = "/en" + data[i].navigation.item[j].menu[x].URL;
+            pathURL = "/en" + pathURL;
           } else {
-            pathURL = data[i].navigation.item[j].menu[x].URL;
+            pathURL = pathURL;
           }
           submenuCol2 =
             submenuCol2 +
