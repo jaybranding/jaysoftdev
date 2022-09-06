@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <form class="elementor-form" method="post" name="New Form">
+      <input type="hidden" name="post_id" value="6" />
+      <input type="hidden" name="form_id" value="0d3dc7e" />
+      <input type="hidden" name="referer_title" value="Parami Bến Tre" />
+
+      <input type="hidden" name="queried_id" value="6" />
+
+      <div class="elementor-form-fields-wrapper elementor-labels-">
+        <div
+          class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-check_in elementor-col-20 elementor-md-20 elementor-field-required"
+        >
+          <label
+            for="form-field-check_in"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Check-in
+          </label>
+
+          <input
+            type="text"
+            name="form_fields[check_in]"
+            id="form-field-check_in"
+            class="elementor-field elementor-size-sm elementor-field-textual elementor-date-field flatpickr-input"
+            placeholder="Check-in"
+            required="required"
+            aria-required="true"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+            min="2022-06-17"
+          />
+        </div>
+        <div
+          class="elementor-field-type-date elementor-field-group elementor-column elementor-field-group-check_out elementor-col-20 elementor-md-20 elementor-field-required"
+        >
+          <label
+            for="form-field-check_out"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Check-out
+          </label>
+
+          <input
+            type="text"
+            name="form_fields[check_out]"
+            id="form-field-check_out"
+            class="elementor-field elementor-size-sm elementor-field-textual elementor-date-field flatpickr-input"
+            placeholder="Check-out"
+            required="required"
+            aria-required="true"
+            pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}"
+            min="2022-06-17"
+          />
+        </div>
+        <div
+          class="elementor-field-type-number elementor-field-group elementor-column elementor-field-group-nguoi_lon elementor-col-20 elementor-md-20 elementor-field-required"
+        >
+          <label
+            for="form-field-nguoi_lon"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Người lớn
+          </label>
+          <input
+            type="number"
+            name="form_fields[nguoi_lon]"
+            id="form-field-nguoi_lon"
+            class="elementor-field elementor-size-sm elementor-field-textual"
+            placeholder="Người lớn"
+            required="required"
+            aria-required="true"
+            min="1"
+            max=""
+          />
+        </div>
+        <div
+          class="elementor-field-type-select elementor-field-group elementor-column elementor-field-group-field_dc5b7ac elementor-col-20 elementor-md-20"
+        >
+          <label
+            for="form-field-field_dc5b7ac"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Trẻ em
+          </label>
+          <div class="elementor-field elementor-select-wrapper">
+            <select
+              name="form_fields[field_dc5b7ac]"
+              id="form-field-field_dc5b7ac"
+              class="elementor-field-textual elementor-size-sm"
+            >
+              <option value="Số trẻ em">Số trẻ em</option>
+              <option value="1 trẻ">1 trẻ</option>
+              <option value="2 trẻ">2 trẻ</option>
+              <option value="3 trẻ">3 trẻ</option>
+              <option value="4 trẻ ">4 trẻ</option>
+            </select>
+          </div>
+        </div>
+        <div
+          class="elementor-field-type-html elementor-field-group elementor-column elementor-field-group-tre_em elementor-col-20 elementor-md-20"
+        >
+          <br />
+        </div>
+        <div
+          class="elementor-field-type-number elementor-field-group elementor-column elementor-field-group-tuoi01 elementor-col-20 elementor-md-20"
+        >
+          <label
+            for="form-field-tuoi01"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Thông tin trẻ 1
+          </label>
+          <input
+            type="number"
+            name="form_fields[tuoi01]"
+            id="form-field-tuoi01"
+            class="elementor-field elementor-size-sm elementor-field-textual"
+            placeholder="Tuổi của trẻ 1"
+            min="0"
+            max=""
+            style="display: none"
+          />
+        </div>
+        <div
+          class="elementor-field-type-number elementor-field-group elementor-column elementor-field-group-tuoi02 elementor-col-20 elementor-md-20"
+        >
+          <label
+            for="form-field-tuoi02"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Thông tin trẻ 2
+          </label>
+          <input
+            type="number"
+            name="form_fields[tuoi02]"
+            id="form-field-tuoi02"
+            class="elementor-field elementor-size-sm elementor-field-textual"
+            placeholder="Tuổi của trẻ 2"
+            min="0"
+            max=""
+            style="display: none"
+          />
+        </div>
+        <div
+          class="elementor-field-type-number elementor-field-group elementor-column elementor-field-group-tuoi03 elementor-col-20 elementor-md-20"
+        >
+          <label
+            for="form-field-tuoi03"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Thông tin trẻ 3
+          </label>
+          <input
+            type="number"
+            name="form_fields[tuoi03]"
+            id="form-field-tuoi03"
+            class="elementor-field elementor-size-sm elementor-field-textual"
+            placeholder="Tuổi của trẻ 3"
+            min="0"
+            max=""
+            style="display: none"
+          />
+        </div>
+        <div
+          class="elementor-field-type-number elementor-field-group elementor-column elementor-field-group-tuoi04 elementor-col-20 elementor-md-20"
+        >
+          <label
+            for="form-field-tuoi04"
+            class="elementor-field-label elementor-screen-only"
+          >
+            Thông tin trẻ 4
+          </label>
+          <input
+            type="number"
+            name="form_fields[tuoi04]"
+            id="form-field-tuoi04"
+            class="elementor-field elementor-size-sm elementor-field-textual"
+            placeholder="Tuổi của trẻ 4"
+            min="0"
+            max=""
+            style="display: none"
+          />
+        </div>
+        <div
+          class="elementor-field-group elementor-column elementor-field-type-submit elementor-col-20 e-form__buttons"
+        >
+          <button type="submit" class="elementor-button elementor-size-sm">
+            <span>
+              <span class="elementor-button-icon"> </span>
+              <span class="elementor-button-text">Tìm Kiếm</span>
+            </span>
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script>
+      $(document).ready(function () {
+        $(
+          "#form-field-tuoi01,#form-field-tuoi02,#form-field-tuoi03,#form-field-tuoi04 "
+        ).hide();
+
+        $("#form-field-field_dc5b7ac").on("change", function () {
+          // ẩn tất cả các trường thêm 1 lần nữa để tránh khi chọn số lớn và số bé :
+          $(
+            "#form-field-tuoi01,#form-field-tuoi02,#form-field-tuoi03,#form-field-tuoi04 "
+          ).hide();
+
+          //lấy text của selec ID form-field-tre_em và gán cho biến soluongtreem
+          var soluongtreem = $("#form-field-field_dc5b7ac :selected").text();
+          console.log(soluongtreem);
+          //neu so luong tre em bang(dấu bằng ==) 1 trẻ thì ID
+          if (soluongtreem == "1 trẻ") {
+            $("#form-field-tuoi01").show();
+          } else if (soluongtreem == "2 trẻ") {
+            $("#form-field-tuoi01,#form-field-tuoi02").show();
+          } else if (soluongtreem == "3 trẻ") {
+            $(
+              "#form-field-tuoi01,#form-field-tuoi02,#form-field-tuoi03"
+            ).show();
+          }
+          //nhung dieu kien con lai:
+          else {
+            $(
+              "#form-field-tuoi01,#form-field-tuoi02,#form-field-tuoi03,#form-field-tuoi04"
+            ).show();
+          }
+        });
+      });
+      //doan code
+    </script>
+  </body>
+</html>
