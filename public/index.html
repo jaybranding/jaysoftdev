@@ -145,3 +145,43 @@
     <div class="cursor"></div>
   </body>
 </html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+  $(document).ready(function () {
+    $("#btn-booking").click(function (e) {
+      $("#booking-form").show();
+      e.preventDefault();
+    });
+    groupTuoi = $(
+      ".elementor-field-group-tuoi01, .elementor-field-group-tuoi02, .elementor-field-group-tuoi03, .elementor-field-group-tuoi04"
+    );
+    groupTuoi.hide();
+
+    $("#form-field-tre_em").change(function () {
+      // ẩn tất cả các trường thêm 1 lần nữa để tránh khi chọn số lớn và số bé :
+      groupTuoi.hide();
+
+      //lấy text của selec ID form-field-tre_em và gán cho biến soluongtreem
+      var soluongtreem = $("#form-field-tre_em :selected").text();
+      console.log(soluongtreem);
+      //neu so luong tre em bang(dấu bằng ==) 1 trẻ thì ID
+      if (soluongtreem == "Số trẻ em") {
+        groupTuoi.hide();
+      } else if (soluongtreem == "1 trẻ") {
+        $(".elementor-field-group-tuoi01").show();
+      } else if (soluongtreem == "2 trẻ") {
+        $(".elementor-field-group-tuoi01,.elementor-field-group-tuoi02").show();
+      } else if (soluongtreem == "3 trẻ") {
+        $(
+          ".elementor-field-group-tuoi01,.elementor-field-group-tuoi02,.elementor-field-group-tuoi03"
+        ).show();
+      }
+      //nhung dieu kien con lai:
+      else {
+        groupTuoi.show();
+      }
+    });
+  });
+  //doan code
+</script>
