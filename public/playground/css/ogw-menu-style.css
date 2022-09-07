@@ -18,7 +18,7 @@ render-desktop nav {
 }
 render-desktop nav .menu-item {
   padding: 12px 15px;
-  font-size: 13px;
+  font-size: 16px;
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300;
   border-bottom: 0px solid rgb(34, 34, 34);
@@ -89,7 +89,7 @@ render-desktop #col2 wrapper2 div.right ul {
 }
 
 render-desktop #col2 wrapper2 div.right ul li {
-  padding: 10px 20px;
+  padding: 22px 20px;
 }
 
 render-desktop #col2 wrapper2 div.right ul li a {
@@ -123,7 +123,7 @@ render-desktop #col2 wrapper2 div.right ul li a:hover::before {
 }
 
 render-desktop div.left > img {
-  max-width: 300px;
+  max-width: 420px;
 }
 render-mobile {
   overflow-x: hidden;
