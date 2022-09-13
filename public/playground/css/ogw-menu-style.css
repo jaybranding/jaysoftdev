@@ -1,0 +1,324 @@
+#menu-main-container {
+  display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+  render-desktop {
+    display: none;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  render-mobile {
+    display: none;
+  }
+}
+render-desktop nav {
+  display: flex;
+  justify-content: space-around;
+}
+render-desktop nav .menu-item {
+  padding: 27px 15px;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+  border-bottom: 0px solid rgb(34, 34, 34);
+  transition: 0.3s;
+}
+
+render-desktop nav .menu-item:hover {
+  border-bottom: 3px solid rgb(34, 34, 34);
+  cursor: pointer;
+}
+
+render-desktop sub {
+  display: flex;
+  justify-content: center;
+}
+
+render-desktop .row {
+  display: flex;
+  width: 1140px;
+}
+render-desktop #col1 {
+  width: 300px;
+}
+render-desktop #col1 wrapper1 {
+  display: block;
+  padding: 40px 0px 100px 0px;
+}
+render-desktop #col1 wrapper1 item {
+  display: block;
+  padding: 20px 45px;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+}
+render-desktop #col1 wrapper1 item i {
+  visibility: hidden;
+  display: inline-block;
+  padding-right: 5px;
+}
+render-desktop #col1 wrapper1 item.itemselect {
+  background-color: #777777;
+  border-radius: 50px;
+  color: white;
+  padding-left: 45px;
+}
+render-desktop #col1 wrapper1 item.itemselect i {
+  visibility: visible;
+}
+
+render-desktop #col1 wrapper1 item.itemselect::before {
+  /*font-family: FontAwesome;
+    font-weight: 400;
+    content: "\f0da";
+    padding-right: 10px;*/
+}
+
+render-desktop #col2 {
+}
+
+render-desktop #col2 wrapper2 {
+  display: flex;
+  padding: 40px 0px 100px 0px;
+}
+
+render-desktop #col2 wrapper2 div.right ul {
+  list-style: none;
+}
+
+render-desktop #col2 wrapper2 div.right ul li {
+  padding: 22px 20px;
+}
+
+render-desktop #col2 wrapper2 div.right ul li a {
+  padding-left: 15px;
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
+}
+render-desktop #col2 wrapper2 div.right ul li a i {
+  visibility: hidden;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+render-desktop #col2 wrapper2 div.right ul li a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+render-desktop #col2 wrapper2 div.right ul li a:hover i {
+  visibility: visible;
+  text-decoration: none;
+}
+
+render-desktop #col2 wrapper2 div.right ul li a:hover::before {
+  /*font-family: FontAwesome;
+  font-weight: 400;
+  content: "\f0da";
+  padding-right: 10px;*/
+}
+
+render-desktop div.left > img {
+  max-width: 420px;
+}
+render-mobile {
+  overflow-x: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 100vh;
+  background-color: white;
+  z-index: 100000;
+  transition: cubic-bezier(0.34, 0.94, 0.73, 0.74) 0.3s;
+  height: 100vh;
+}
+
+render-mobile navm .navmhead {
+  padding: 20px 10px;
+  display: block;
+}
+render-mobile navm {
+  padding: 20px 10px;
+  display: block;
+}
+
+render-mobile #closenavm {
+  color: rgb(34, 34, 34);
+  float: right;
+  padding: 15px;
+}
+render-mobile itemm {
+  display: block;
+  padding: 10px 5px;
+  border-bottom: solid rgb(238, 238, 238) 1px;
+  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: bold;
+}
+
+render-mobile itemm span.icon {
+  float: right;
+  padding-right: 10px;
+}
+render-mobile subitemms {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  padding: 20px;
+}
+render-mobile subitemms subitemm {
+  width: 50%;
+  text-align: center;
+}
+
+render-mobile subitemms collection {
+  /* position: absolute; */
+  /* bottom: 10px; */
+  width: 100%;
+  /* align-items: center; */
+  text-align: center;
+  padding: 20px 0px;
+}
+render-mobile subitemms collection a {
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+}
+render-mobile subitemms subitemm img {
+  max-height: 100px;
+}
+render-mobile subitemms subitemm h4 {
+  margin: 0px 2px;
+  font-size: 14px;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+}
+render-mobile wrapperm {
+  display: none;
+}
+render-mobile wrapperm {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: end;
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  z-index: 1000;
+}
+render-mobile wrapperm container {
+  width: 350px;
+  height: 100vh;
+  background-color: white;
+  display: block;
+  z-index: 1000;
+  padding: 10px;
+  box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
+  -webkit-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
+  -moz-box-shadow: -6px 0px 13px -6px rgba(202, 202, 202, 0.75);
+  padding: 20px;
+}
+render-mobile wrapperm container .close {
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+}
+render-mobile wrapperm container .close svg {
+  float: left;
+}
+render-mobile wrapperm overlay {
+  background-color: rgba(0, 0, 0, 0);
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+render-mobile wrapperm .right {
+  display: inline;
+  float: right;
+}
+render-mobile wrapperm .left {
+  display: inline;
+  float: left;
+}
+
+render-mobile popupm wrapperm img {
+  max-width: 100%;
+}
+
+render-mobile .selectednav {
+  animation: slide-in ease-in-out 0.5s forwards;
+  -webkit-animation: slide-in ease-in-out 0.5s forwards;
+}
+
+render-mobile .dismissnav {
+  animation: slide-out ease-in-out 0.5s forwards;
+  -webkit-animation: slide-out ease-in-out 0.5s forwards;
+}
+render-mobile popupm wrapperm container li {
+  display: block;
+  border-bottom: solid rgb(238, 238, 238) 1px;
+  padding: 5px 0px;
+}
+render-mobile popupm wrapperm container h4 {
+  margin: 5px 0px;
+  font-family: var(--e-global-typography-primary-font-family), Sans-serif;
+}
+render-mobile popupm wrapperm container li a {
+  font-family: "Source Sans Pro", Sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(34, 34, 34);
+  text-decoration: none;
+}
+
+render-mobile popupm wrapperm container li a i {
+  display: inline-block;
+  padding-right: 5px;
+}
+@keyframes slide-in {
+  0% {
+    -webkit-transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes slide-in {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes slide-out {
+  0% {
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+  }
+}

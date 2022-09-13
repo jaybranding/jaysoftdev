@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $(".group").on("click", function () {
+          $(".group").removeClass("active");
+          $(this).addClass("active");
+        });
+
+        $(".next").on("click", function () {
+          if ($(".container > div").last().hasClass("active")) {
+            $(".container > div").first().addClass("active2");
+          } else {
+            $(".active").next().addClass("active2");
+          }
+          $(".active").removeClass("active");
+          $(".active2").addClass("active");
+          $(".active2").removeClass("active2");
+        });
+        $(".prev").on("click", function () {
+          if ($(".container > div").first().hasClass("active")) {
+            $(".container > div").last().addClass("active2");
+          } else {
+            $(".active").prev().addClass("active2");
+          }
+          $(".active").removeClass("active");
+          $(".active2").addClass("active");
+          $(".active2").removeClass("active2");
+        });
+      });
+    </script>
+    <style>
+      .active {
+        background-color: red;
+      }
+      .next2 {
+        background-color: yellow;
+      }
+      .group {
+        transition: 0.5s;
+      }
+    </style>
+  </head>
+  <body class="center">
+    <div class="container grid grid-cols-4 gap-4">
+      <div id="group1" class="group active">
+        <div class="year">year 1</div>
+        <div class="yeardes">Xin chào</div>
+      </div>
+      <div id="group2" class="group">
+        <div class="year">year 2</div>
+        <div class="yeardes">year 2 des</div>
+      </div>
+      <div id="group3" class="group">
+        <div class="year">year 3</div>
+        <div class="yeardes">year 3 des</div>
+      </div>
+      <div id="group1" class="group">
+        <div class="year">year 1</div>
+        <div class="yeardes">Xin chào</div>
+      </div>
+      <div id="group2" class="group">
+        <div class="year">year 2</div>
+        <div class="yeardes">year 2 des</div>
+      </div>
+      <div id="group3" class="group">
+        <div class="year">year 3</div>
+        <div class="yeardes">year 3 des</div>
+      </div>
+      <div id="group1" class="group">
+        <div class="year">year 1</div>
+        <div class="yeardes">Xin chào</div>
+      </div>
+      <div id="group2" class="group">
+        <div class="year">year 2</div>
+        <div class="yeardes">year 2 des</div>
+      </div>
+      <div id="group3" class="group">
+        <div class="year">year 3</div>
+        <div class="yeardes">year 3 des</div>
+      </div>
+    </div>
+    <div class="paging mx-auto flex center p-2">
+      <button class="prev button bg-gray-100 rounded-xl p-2 shadow-md m-5">
+        Prev
+      </button>
+      <button class="next button bg-gray-100 rounded-xl p-2 shadow-md m-5">
+        Next
+      </button>
+    </div>
+  </body>
+</html>

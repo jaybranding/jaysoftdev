@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Document</title>
+    <style>
+      #ket-qua td {
+        padding: 5px;
+      }
+
+      .ketqua-wrapper {
+        height: 250px;
+        overflow-y: scroll;
+      }
+    </style>
+    <script></script>
+  </head>
+  <body class="p-5 bg-gray-100">
+    <div
+      class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden md:max-w-2xl p-5"
+    >
+      <div class="">
+        <h1 class="text-slate-900">Demo Filter Json</h1>
+        <div id="DrpDwn" class="">
+          Location:<select
+            id="DropDown_Loc"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          >
+            <option value="0">Location</option>
+          </select>
+          <br />
+          Location Sub:<select
+            id="DropDown_Locsub"
+            class="block appearance-none w-full bg-white border border-gray-400 hover:border-gray-500 px-4 py-2 pr-8 rounded shadow leading-tight focus:outline-none focus:shadow-outline"
+          >
+            <option value="0">Location Sub</option>
+          </select>
+        </div>
+        <br />
+        Filtered product information
+
+        <div class="ketqua-wrapper">
+          <table id="ket-qua"></table>
+        </div>
+        <div id="adress-map"></div>
+
+        <iframe
+          id="iframemap"
+          width="600"
+          height="450"
+          style="border: 0"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+          src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDDjxUBGICHP1b5ejHu8xDl89qUEIi-U4U
+          &q=6+Vo+Van+Kiet+Quan+1+TPHCM"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // FETCHING DATA FROM JSON FILE
+        let dataJSON = [];
+        var GGAPIkey = "AIzaSyDDjxUBGICHP1b5ejHu8xDl89qUEIi-U4U";
+
+        //function click link
+
+        $(document).on("click", ".address-link", function () {
+          console.log($(this).val());
+
+          var txtaddress = $(this).val();
+          $("#adress-map").text(txtaddress);
+
+          var fullURLaddress =
+            "https://www.google.com/maps/embed/v1/place?key=" +
+            GGAPIkey +
+            "&q=" +
+            txtaddress;
+          $("#iframemap").attr("src", fullURLaddress);
+        });
+
+        $.getJSON("./location.json", function (json) {
+          dataJSON = json;
+          //detact change Location
+          $("#DropDown_Loc").change(function () {
+            var selectedLoc = this.value;
+            var locsSubArray = [];
+            console.log(selectedLoc);
+            if (selectedLoc != 0) {
+              var jsonfilterLoc = json.filter(
+                (v) => v.Location === selectedLoc
+              );
+
+              for (var i = 0; i < jsonfilterLoc.length; i++) {
+                var locsub = jsonfilterLoc[i].LocationSub;
+
+                if ($.inArray(locsub, locsSubArray) == -1) {
+                  locsSubArray.push(locsub);
+                }
+              }
+            } else {
+              jsonfilterLoc = json;
+            }
+            console.log(locsSubArray);
+            $("#DropDown_Locsub").html(
+              "<option value='0'>Location Sub</option>"
+            );
+
+            for (var i = 0; i < locsSubArray.length; i++) {
+              $("#DropDown_Locsub").append(
+                '<option value="' +
+                  locsSubArray[i] +
+                  '">' +
+                  locsSubArray[i] +
+                  "</option>"
+              );
+            }
+
+            showTable(jsonfilterLoc);
+          });
+
+          //detact change Location Sub
+          $("#DropDown_Locsub").change(function () {
+            var selectedLoc = $("#DropDown_Loc").val();
+            var selectedLocSub = this.value;
+            var jsonfilterLoc = json.filter(
+              (v) =>
+                v.Location === selectedLoc && v.LocationSub === selectedLocSub
+            );
+
+            console.log(selectedLoc);
+            showTable(jsonfilterLoc);
+          });
+
+          //function để trích json data
+          function showTable(json) {
+            $("#ket-qua").html("");
+
+            $("#ket-qua").append(" ");
+
+            for (var i = 0; i < json.length; i++) {
+              $("#ket-qua").append(
+                "<tr>" +
+                  "<td>id:" +
+                  json[i].ID +
+                  " </td><td> " +
+                  json[i].Name +
+                  ' </td><td><button href="#" class="address-link bg-white hover:bg-gray-100 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow" value="' +
+                  json[i].Address +
+                  '">' +
+                  json[i].Address +
+                  "</button></td><td> " +
+                  json[i].Location +
+                  "</td><td>" +
+                  json[i].LocationSub +
+                  "</td></tr>"
+              );
+            }
+            $("#ket-qua").append("");
+          }
+
+          showTable(json);
+
+          var locsArray = [];
+
+          $.each(json, function (index) {
+            var loc = json[index].Location;
+            if ($.inArray(loc, locsArray) == -1) {
+              locsArray.push(loc);
+            }
+          });
+
+          locsArray.sort();
+
+          $.each(locsArray, function (i) {
+            $("#DropDown_Loc").append(
+              '<option value="' +
+                locsArray[i] +
+                '">' +
+                locsArray[i] +
+                "</option>"
+            );
+          });
+        }); //end get json
+
+        //console.log(dataJSON);
+      });
+    </script>
+  </body>
+</html>

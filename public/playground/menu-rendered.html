@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>rendered menu</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      .nav-menu ul {
+        display: flex;
+        list-style-type: none;
+      }
+
+      .nav-item:hover {
+        cursor: pointer;
+      }
+      .nav-item .wrapper {
+        position: absolute;
+        width: 100vw;
+        left: 0;
+        display: flex;
+        visibility: hidden;
+        transform: translateY(100px);
+        opacity: 0;
+        height: 0px;
+        -webkit-transition: all 0.5s ease;
+        -moz-transition: all 0.5s ease;
+        -o-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+        background-color: aquamarine;
+      }
+
+      .nav-item .wrapper.showBlock {
+        display: flex;
+        visibility: visible;
+        height: 200px;
+        opacity: 1;
+        transform: translateY(0px);
+      }
+      .nav-item .wrapper .col1 {
+        background-color: antiquewhite;
+        width: 35%;
+      }
+      .nav-container .wrapper .col2 {
+        background-color: blue;
+        width: 65%;
+      }
+      .sub {
+        display: flex;
+      }
+      .sub .sub1 {
+        width: 50%;
+      }
+
+      .sub .sub2 {
+        width: 50%;
+      }
+
+      .sub .sub2 a {
+        display: block;
+      }
+    </style>
+    <script>
+      $(function () {
+        $(".nav-item").mouseover(function () {
+          $(".wrapper", this).addClass("showBlock");
+          console.log("show");
+        });
+
+        $(".nav-item").mouseleave(function () {
+          $(".wrapper", this).removeClass("showBlock");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <rendered>
+      <nav class="nav-menu">
+        <ul>
+          <li class="nav-item" id="nav-menu-0">
+            <button>Ghế Massage</button>
+            <div class="wrapper" id="nav-contain-0">
+              <div class="col1">
+                <ul>
+                  <li id="item-1"><span>Master Drive AI2</span></li>
+                </ul>
+              </div>
+              <div class="col2">
+                <div class="sub">
+                  <div class="sub1">
+                    <img
+                      src="https://via.placeholder.com/400x400?text=Master+Drive+AI2"
+                    />
+                  </div>
+                  <div class="sub2">
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
+                      >Tìm Hiểu Thêm</a
+                    >
+
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
+                      >Tìm Hiểu Thêm</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="nav-item" id="nav-menu-1">
+            <button>Massage Chân</button>
+            <div class="wrapper" id="nav-contain-1">
+              <div class="col1">
+                <ul>
+                  <li id="item-1"><span>Master Drive AI2</span></li>
+                </ul>
+              </div>
+              <div class="col2">
+                <div class="sub">
+                  <div class="sub1">
+                    <img
+                      src="https://via.placeholder.com/400x400?text=Master+Drive+AI2"
+                    />
+                  </div>
+                  <div class="sub2">
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-0"
+                      >Tìm Hiểu Thêm</a
+                    >
+
+                    <a href="/mua-sam/master-drive-ai/" id="item-sub-1"
+                      >Tìm Hiểu Thêm</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </rendered>
+  </body>
+</html>

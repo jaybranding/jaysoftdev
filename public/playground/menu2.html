@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu 2</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/ogw-menu-style.css" />
+
+    <script src="js/ogw-menu.js" defer></script>
+    <script>
+      $(function () {
+        pathURL = "https://ogawaworld.vn/xin-chao";
+        if (pathURL.includes("https://ogawaworld.vn/")) {
+          pathURL = pathURL.replace("https://ogawaworld.vn/", "/");
+          console.log(pathURL);
+        }
+        $("#btn-menu-main-container").click(function (e) {
+          $("render-mobile").css({
+            left: "0px",
+          });
+          e.preventDefault();
+        });
+
+        var pathname = window.location.pathname.slice(0, 4); // Returns path only (/path/example.html)
+        console.log(pathname);
+      });
+    </script>
+  </head>
+
+  <body style="margin: 0px; background-color: grey">
+    <button id="btn-menu-main-container">hover</button>
+    <div id="menu-main-container">Content</div>
+    <render-desktop>
+      <nav></nav>
+      <sub style="background-color: blue; margin-bottom: -80px">
+        <div class="row">
+          <div id="col1"></div>
+          <div id="col2"></div>
+        </div>
+      </sub>
+    </render-desktop>
+    <div style="background-color: red">hello</div>
+    <render-mobile>
+      <popupm></popupm>
+      <navm></navm>
+    </render-mobile>
+    <style></style>
+  </body>
+</html>

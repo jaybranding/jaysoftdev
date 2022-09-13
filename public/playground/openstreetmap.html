@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Quick Start - Leaflet</title>
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="docs/images/favicon.ico"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
+
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+      }
+      .leaflet-container {
+        height: 100vw;
+        width: 100vh;
+        max-width: 100%;
+        max-height: 100%;
+      }
+      a {
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map" style="width: 100vw; height: 100vh"></div>
+    <script>
+      //custom icon
+      var logoIcon = L.icon({
+        iconUrl: "./img/Q-Loading.gif",
+        shadowUrl: "https://jaysoft.dev/playground/img/shadow.png",
+
+        iconSize: [200, 140], // size of the icon
+        shadowSize: [68, 17], // size of the shadow
+        iconAnchor: [95, 140], // point of the icon which will correspond to marker's location
+        shadowAnchor: [33, 50], // the same for the shadow
+        popupAnchor: [5, -90], // point from which the popup should open relative to the iconAnchor
+      });
+
+      var map = L.map("map").setView([14.823099, 106.629662], 6);
+
+      var markerjson = [
+        {
+          kinhdo: "21.027763",
+          vido: "105.83416",
+          title: "Hanoi",
+          description: "xin chào",
+          link: "https://jaysoft.dev",
+        },
+        {
+          kinhdo: "10.833199",
+          vido: "108.628762",
+          title: "Vietnam",
+          description: "xin chào bạn",
+          link: "https://jaysoft.dev",
+        },
+        {
+          kinhdo: "11.843199",
+          vido: "105.739762",
+          title: "Vietnam",
+          description: "xin chào bạn",
+          link: "https://jaysoft.dev",
+        },
+        {
+          kinhdo: "12.923199",
+          vido: "104.629862",
+          title: "Vietnam",
+          description: "xin chào bạn",
+          link: "https://jaysoft.dev",
+        },
+        {
+          kinhdo: "13.822199",
+          vido: "103.699762",
+          title: "Vietnam",
+          description: "xin chào bạn",
+          link: "https://jaysoft.dev",
+        },
+      ];
+
+      var tiles = L.tileLayer(
+        "https://api.maptiler.com/maps/pastel/{z}/{x}/{y}.png?key=dmpKsgD6AiObhpNmUBGp",
+        {
+          maxZoom: 10,
+          attribution:
+            '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        }
+      ).addTo(map);
+
+      for (var i = 0; i < markerjson.length; i++) {
+        var locjson = [];
+        locjson.push(markerjson[i].kinhdo, markerjson[i].vido);
+
+        var marker = L.marker(locjson, { icon: logoIcon })
+          .addTo(map)
+          .bindPopup(
+            "<h2>" +
+              markerjson[i].title +
+              "</h2><br><span>" +
+              markerjson[i].description +
+              "</span><br><a href='" +
+              markerjson[i].link +
+              "'>Click here</a>"
+          );
+      }
+
+      /*
+      var marker = L.marker([21.027763, 105.83416])
+        .addTo(map)
+        .bindPopup(
+          "<img src='https://via.placeholder.com/150'/><br><b>Dùng HTML bất kỳ</b><br><br />I am a popup.<br/><button>Click button</button><br><a href=#>Link</a>"
+        );
+
+      var marker2 = L.marker([10.823199, 106.629762])
+        .addTo(map)
+        .bindPopup(
+          "<img src='https://via.placeholder.com/150'/><br><b>Dùng HTML bất kỳ</b><br><br />I am a popup.<br/><button>Click button</button><br><a href=#>Link</a>"
+        );
+
+      var marker3 = L.marker([13.756331, 100.501762])
+        .addTo(map)
+        .bindPopup(
+          "<img src='https://via.placeholder.com/150'/><br><b>Dùng HTML bất kỳ</b><br><br />I am a popup.<br/><button>Click button</button><br><a href=#>Link</a>"
+        );
+
+      var marker4 = L.marker([-8.340539, 115.091949])
+        .addTo(map)
+        .bindPopup(
+          "<img src='https://via.placeholder.com/150'/><br><b>Dùng HTML bất kỳ</b><br><br />I am a popup.<br/><button>Click button</button><br><a href=#>Link</a>"
+        );*/
+    </script>
+  </body>
+</html>
