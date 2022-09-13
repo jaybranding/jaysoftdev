@@ -173,6 +173,7 @@ render-mobile subitemms {
 render-mobile subitemms subitemm {
   width: 50%;
   text-align: center;
+  margin: 13px 0px;
 }
 
 render-mobile subitemms collection {
